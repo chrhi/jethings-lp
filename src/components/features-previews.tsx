@@ -35,9 +35,9 @@ export default function FeaturesPreviews() {
   const [activeFeature, setActiveFeature] = useState(features[0]);
 
   return (
-    <MaxWidthWrapper className="mb-4 flex flex-col gap-y-6">
+    <MaxWidthWrapper className="mb-4 flex flex-col gap-y-6 z-[10]">
       {/* Tabs */}
-      <div className="w-full flex items-center justify-center gap-x-6">
+      <div className="w-full flex items-center justify-center flex-wrap gap-6">
         {features.map((feature) => {
           const Icon = feature.icon;
           const isActive = activeFeature.id === feature.id;
@@ -45,13 +45,16 @@ export default function FeaturesPreviews() {
             <button
               key={feature.id}
               onClick={() => setActiveFeature(feature)}
-              className={`w-[150px] h-[110px] cursor-pointer flex flex-col items-center justify-center rounded-2xl border-2 transition-all ${
+              className={`w-[150px] z-[10] h-[110px] cursor-pointer flex flex-col items-center justify-center rounded-2xl border-2 transition-all ${
                 isActive
-                  ? "bg-[#45acab]/20 border-[#45acab] text-[#45acab]"
+                  ? "bg-[#45acab]/20 border-[#45acab] border-2 text-[#45acab]"
                   : "bg-transparent border-[#45acab]/40 text-gray-600 hover:border-[#45acab]"
               }`}
             >
-              <Icon className="w-6 h-6 mb-2" />
+              <Icon
+                onClick={() => setActiveFeature(feature)}
+                className="w-6 h-6 mb-2"
+              />
               <span className="text-sm text-center">{feature.name}</span>
             </button>
           );
@@ -59,7 +62,7 @@ export default function FeaturesPreviews() {
       </div>
 
       {/* Preview area */}
-      <div className="w-full h-[320px] border rounded-2xl bg-[#45acab]/5 flex items-center justify-center text-gray-700">
+      <div className="w-full h-[500px] border rounded-2xl bg-[#45acab]/5 flex items-center justify-center text-gray-700">
         {activeFeature.preview}
       </div>
     </MaxWidthWrapper>

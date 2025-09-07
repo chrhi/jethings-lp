@@ -67,7 +67,7 @@ export default function Footer() {
                 <span>+213 540 261 833</span>
               </div>
               <div className="flex items-center gap-3">
-                <span>Alger, Algérie</span>
+                <span>Alger Centre , Algérie</span>
               </div>
             </div>
           </div>

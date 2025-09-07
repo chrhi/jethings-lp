@@ -1,16 +1,6 @@
 "use client";
 import { ShieldCheck, CreditCard, Infinity, Eye } from "lucide-react";
-
-// MaxWidthWrapper component
-function MaxWidthWrapper({ children, className = "" }) {
-  return (
-    <div
-      className={`mx-auto w-full max-w-screen-xl px-4 sm:px-6 lg:px-8 ${className}`}
-    >
-      {children}
-    </div>
-  );
-}
+import MaxWidthWrapper from "./max-with-wrapper";
 
 const reasons = [
   {
@@ -50,11 +40,11 @@ export default function WhyFree() {
 
       <MaxWidthWrapper className="relative z-10">
         {/* Header Section */}
-        <div className="text-center sm:text-left mb-12 lg:mb-16">
+        <div className="text-left mb-12 lg:mb-16">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
             Pourquoi c'est gratuit ?
           </h2>
-          <p className="text-base sm:text-lg text-gray-100/90 max-w-2xl mx-auto sm:mx-0 leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-100/90 max-w-2xl ml-auto sm:mx-0 leading-relaxed">
             Nous croyons que les petites entreprises méritent des outils
             puissants sans étiquette de prix élevée. Notre logiciel est conçu
             pour vous aider à digitaliser vos opérations, sans contraintes
