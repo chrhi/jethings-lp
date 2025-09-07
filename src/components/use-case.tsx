@@ -44,8 +44,8 @@ const useCases = [
 
 export default function UseCases() {
   return (
-    <MaxWidthWrapper className="my-16 h-fit min-h-screen">
-      <h2 className="text-7xl font-bold text-gray-800 text-start mb-12">
+    <MaxWidthWrapper className="my-16 h-fit ">
+      <h2 className="text-3xl font-bold text-gray-800 text-center mb-12">
         Cas d'utilisation
       </h2>
 
