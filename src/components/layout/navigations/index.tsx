@@ -54,27 +54,30 @@ const solutions = [
     available: false,
   },
 ]
-
 const features = [
   {
     title: "POS System",
     href: "/features/pos",
     description: "Fast, intuitive checkout with payment processing and receipt management",
+    icon: ShoppingCart,
   },
   {
     title: "Stock Management",
     href: "/features/stock",
     description: "Track inventory levels, manage warehouses, and automate reordering",
+    icon: Package,
   },
   {
     title: "Sales Analytics",
     href: "/features/sales",
     description: "Comprehensive sales reporting and business intelligence dashboard",
+    icon: TrendingUp,
   },
   {
     title: "Online Store",
     href: "/features/online-store",
     description: "Integrated e-commerce platform with omnichannel capabilities",
+    icon: Store,
   },
 ]
 
@@ -214,11 +217,7 @@ export function Navigation() {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/pricing">Pricing</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
+   
       </NavigationMenuList>
     </NavigationMenu>
   )

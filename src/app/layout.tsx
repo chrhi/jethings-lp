@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header";
 import { SiteHeader } from "@/components/layout/side-header";
 
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"], // optional: adjust weights as needed
 });
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -45,8 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} antialiased`}>
-        {/* <Header /> */}
+      <body className={`${poppins.variable} antialiased light`}>
         <SiteHeader />
         {children}
       </body>
