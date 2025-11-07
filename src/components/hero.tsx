@@ -10,7 +10,7 @@ export default function Hero() {
     <section className="relative mt-20 py-12 overflow-hidden">
       <MaxWidthWrapper>
         <div className="w-full min-h-[600px] flex items-center">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 md:gap-12 w-full items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 md:gap-12 w-full items-start">
             {/* Left Column */}
             <div className="flex flex-col justify-center lg:col-span-3">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
@@ -40,7 +40,12 @@ export default function Hero() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button disabled>Join the waitlist</Button>
+            
+                <button className="button-33 cursor-pointer" role="button">
+  <span className="text">
+    Join the waitlist
+  </span>
+</button>
                 <Button disabled variant="outline">
                   View demo
                 </Button>

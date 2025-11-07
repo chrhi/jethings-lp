@@ -132,7 +132,7 @@ export function Navigation() {
 
   return (
     <NavigationMenu viewport={isMobile}>
-      <NavigationMenuList className="flex-wrap">
+      <NavigationMenuList className="flex-wrap flex items-center justify-center">
         <NavigationMenuItem>
           <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
           <NavigationMenuContent>
@@ -215,6 +215,14 @@ export function Navigation() {
               ))}
             </ul>
           </NavigationMenuContent>
+        </NavigationMenuItem>
+
+
+
+
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Why us?</NavigationMenuTrigger>
+      
         </NavigationMenuItem>
 
    
