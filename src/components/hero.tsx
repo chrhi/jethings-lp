@@ -1,73 +1,78 @@
 "use client";
 
+import Image from "next/image";
 import MaxWidthWrapper from "./max-with-wrapper";
 import { Button } from "./ui/button";
-import Image from "next/image";
-import { TypeAnimation } from "react-type-animation";
 
 export default function Hero() {
   return (
-    <section className="relative mt-20 py-12 overflow-hidden">
-      <MaxWidthWrapper>
-        <div className="w-full min-h-[600px] flex items-center">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 md:gap-12 w-full items-start">
-            {/* Left Column */}
-            <div className="flex flex-col justify-center lg:col-span-3">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-                Pushing 
-                commerce{" "}
-                <span className="text-[#45acab] inline-block min-w-[250px]">
-                  <TypeAnimation
-                    sequence={[
-                      "further and beyond",
-                      2000,
-                      "to new heights",
-                      2000,
-                      "into the future",
-                      2000,
-                    ]}
-                    wrapper="span"
-                    speed={50}
-                    repeat={Infinity}
-                  />
-                </span>
-              </h1>
+ <>
+    <section className="relative   py-16   curved-edge ">
+      <MaxWidthWrapper className="h-fit">
+        <div className="flex flex-col items-center  text-center gap-y-8 ">
+          {/* HEADLINE */}
+          <h1 className="relative font-caveat text-[4.8rem] md:text-[5.2rem] font-bold leading-tight text-[#0F1117]">
+           Pushing commerce further and {" "}
+            <span className="relative inline-block">
+              <span className="relative z-10">beyond.</span>
+              <Image
+                src="/odoo-assets/highlights/yellow_highlight_bold_05.svg"
+                alt="highlight"
+                width={600}
+                height={60}
+                className="absolute bottom-[12%] left-0 w-full z-0"
+                priority
+              />
+            </span>
+          </h1>
 
-              <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl">
-                Optimize your inventory, track your products in real time, and
-                make informed decisions with our intuitive stock management
-                platform.
-              </p>
+          {/* SUBHEADLINE */}
+          <p className="relative font-semibold font-caveat text-[1.8rem] md:text-[4.6rem] text-[#0F1117]">
+           Powerful, intuitive, yet{" "}
+            <span className="relative inline-block">
+              <span className="relative z-10">affordable!</span>
+              <Image
+                src="/odoo-assets/highlights/blue_highlight_01.svg"
+                alt="highlight"
+                width={300}
+                height={40}
+                className="absolute bottom-[10%] left-0 w-full z-0"
+                priority
+              />
+            </span>
+          </p>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-            
-                <button className="button-33 cursor-pointer" role="button">
-  <span className="text">
-    Join the waitlist
-  </span>
-</button>
-                <Button disabled variant="outline">
-                  View demo
-                </Button>
-              </div>
-            </div>
+          {/* BUTTONS */}
+          <div className="flex flex-col sm:flex-row gap-4 mt-6">
+            <button className="button-33 cursor-pointer font-medium px-8 py-2 rounded-md transition text-lg">
+              Start now – It’s free
+            </button>
+            <Button className=" cursor-pointer " variant={"ghost"}>
+              Meet an advisor
+            </Button>
+          </div>
 
-            {/* Right Column - Image */}
-            <div className="flex items-center justify-center lg:col-span-2">
-              <div className="relative w-[350px] h-[350px] md:w-[450px] md:h-[450px]">
-                <Image
-                  alt="all apps"
-                  src="/all-apps.svg"
-                  fill
-                  priority
-                  sizes="(max-width: 768px) 350px, (max-width: 1200px) 450px, 450px"
-                  className="object-contain"
-                />
-              </div>
+          {/* PRICE LABEL WITH ARROW */}
+          <div className="absolute mt-64 right-36  ">
+           <Image src={"/odoo-assets/arrow_doodle_1.svg"} width={50} height={100} alt="arrow"/>
+
+            {/* price text */}
+            <div className="text-[#45ACAB] font-caveat text-2xl md:text-3xl rotate-[-6deg] ">
+              <span className="italic font-bold">50 DZD / commond</span>
+              <br />
+              <span className="text-xl md:text-2xl font-bold">for each customer</span>
             </div>
           </div>
         </div>
       </MaxWidthWrapper>
+
+
+
+      
     </section>
+
+
+
+ </>
   );
 }
