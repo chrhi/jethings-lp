@@ -1,3 +1,4 @@
+import { Features } from "@/components/feature";
 import Hero from "@/components/hero";
 import { Switch } from "@/components/ui/switch";
 import Image from "next/image";
@@ -5,65 +6,61 @@ import Image from "next/image";
 export default function Page() {
   return (
     <>
-    <div className="flex flex-col gap-y-8 items-center min-h-screen h-fit">
+    <div className="flex flex-col items-center min-h-screen h-fit ">
+<div className="w-full h-[70px] bg-white"  />
+
 
         <Hero />
-      <div className="w-full  min-h-[400px] h-fit">
-       <div className="max-w-2xl mx-auto grid grid-cols-6 gap-8">
-
-        {[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24].map(item => {
-
-        return (
-       <div className="flex flex-col gap-y-2">
-      <div className="w-[100px] h-[100px] bg-orange-600 rounded-xl"> </div>
-          <p className="text-xs font-bold text-center">item Name</p>
-        </div>
-        )
-       })}
-        </div>
-
-
-      </div>
+     <Features />
 
 
 
 
-       <div className="w-full h-[100px] max-w-2xl my-8  mx-auto flex items-center justify-between relative">
-<div className="flex items-center justify-start gap-2 relative ">
-  <Image src={"/odoo-assets/corner_4.svg"} alt="the image " width={70} height={70} className="mb-8  absolute -left-10 -top-10"  />
+       <div className="w-full min-h-[100px] max-w-2xl my-8 mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between relative px-4 sm:px-0 gap-4 sm:gap-0">
+<div className="flex items-center justify-start gap-2 relative w-full sm:w-auto">
+  <Image src={"/odoo-assets/corner_4.svg"} alt="the image " width={70} height={70} className="mb-8 absolute -left-6 sm:-left-10 -top-6 sm:-top-10 hidden sm:block"  />
 
 <Switch />
-<p className="text-sm text-start font-bold ">continue without jethings</p>
+<p className="text-sm text-start font-bold">continue without jethings</p>
 </div>
 
-<div className="text-green-800 font-bold text-end flex items-center justify-end gap-x-4 ">
+<div className="text-green-800 font-bold text-start sm:text-end flex items-center justify-start sm:justify-end gap-x-2 sm:gap-x-4 w-full sm:w-auto cursor-pointer hover:opacity-80 transition-opacity">
   <p className="font-bold text-sm">View all Apps </p>
- <Image src={"/odoo-assets/secondary_arrow_sm_03.svg"} alt="the image " width={40} height={40} />
+ <Image src={"/odoo-assets/secondary_arrow_sm_03.svg"} alt="arrow icon" width={40} height={40} />
 </div>
 </div>
 
 
          
 
-         <div className="flex flex-col gap-y-4 items-center">
-          <h2 className="font-semibold text-4xl ">Imagine a vast collection of business apps at your disposal.</h2>
+         <div className="flex flex-col gap-y-4 items-center px-4 text-center relative">
+          <div className="absolute -left-8 sm:-left-12 top-0 hidden md:block">
+            <Image 
+              src="/odoo-assets/arrow_doodle_3.svg" 
+              alt="decorative arrow"
+              width={80}
+              height={80}
+              className="opacity-60"
+            />
+          </div>
+          <h2 className="font-semibold text-2xl sm:text-3xl md:text-4xl max-w-4xl">Imagine a vast collection of business apps at your disposal.</h2>
          <div className="flex flex-col items-center gap-y-2">
-           <p className="text-xl">
+           <p className="text-base sm:text-lg md:text-xl">
             Got something to improve? There is an app for that.
           </p>
-          <p className="text-xl">No complexity, no cost, just a one-click install.</p>
+          <p className="text-base sm:text-lg md:text-xl">No complexity, no cost, just a one-click install.</p>
          </div>
          <div className="flex flex-col items-center my-4 gap-y-2">
-           <p className="text-lg">Each app simplifies a process and empowers more people.</p>
-          <p className="text-lg">Imagine the impact when everyone gets the right tool for the job, with perfect integration.</p>
+           <p className="text-sm sm:text-base md:text-lg">Each app simplifies a process and empowers more people.</p>
+          <p className="text-sm sm:text-base md:text-lg">Imagine the impact when everyone gets the right tool for the job, with perfect integration.</p>
          </div>
          </div>
 
 
 
-         <div className="w-full rounded-l-full bg-white  shadow-2xl h-[900px] ml-18 relative my-32 flex flex-col gap-y-8 items-center pt-20 ">
+         <div className="w-full rounded-l-none md:rounded-l-full bg-white shadow-2xl min-h-[600px] md:h-[900px] md:ml-0 lg:ml-[4.5rem] relative my-16 sm:my-24 md:my-32 flex flex-col gap-y-6 md:gap-y-8 items-center pt-12 sm:pt-16 md:pt-20 px-4 sm:px-6 md:px-0">
 
-          <div className="w-[700px] h-[150px]  absolute right-0 -top-20 ">
+          <div className="w-full sm:w-[500px] md:w-[700px] h-auto md:h-[150px] absolute right-0 -top-12 sm:-top-16 md:-top-20 px-4 sm:px-0">
                   <div className="relative flex items-center justify-start ">
 
 
@@ -72,12 +69,12 @@ export default function Page() {
   <AvatarFallback>CN</AvatarFallback>
 </Avatar> */}
 
-      <Image src={"/odoo-assets/highlights/bg_yellow.svg"} alt="yellow image" width={250} height={100} />
-       <div className="w-fit h-fit py-4 px-6  shadow-lg rounded-full bg-white z-10 absolute left-20 ">
+      <Image src={"/odoo-assets/highlights/bg_yellow.svg"} alt="yellow image" width={250} height={100} className="w-auto h-auto" />
+       <div className="w-fit max-w-[200px] sm:max-w-none h-fit py-3 sm:py-4 px-4 sm:px-6 shadow-lg rounded-full bg-white z-10 absolute left-4 sm:left-12 md:left-20">
 
-            <p className="text-lg text-start  ">If you simplify everything, you can do anything!</p>
+            <p className="text-sm sm:text-base md:text-lg text-start">If you simplify everything, you can do anything!</p>
 
-            <span className="text-gray-400 text-xs">- Bill McDermott, former CEO of SAP</span>
+            <span className="text-gray-400 text-[10px] sm:text-xs">- Bill McDermott, former CEO of SAP</span>
        </div>
              
 
@@ -88,7 +85,7 @@ export default function Page() {
 
 
 
-           <h1 className="relative font-caveat text-[4.8rem] md:text-[5.2rem] font-bold leading-tight text-[#0F1117]">
+           <h1 className="relative font-caveat text-3xl sm:text-4xl md:text-[4.8rem] lg:text-[5.2rem] font-bold leading-tight text-[#0F1117] px-4 text-center">
                      Level up your quality of  {" "}
                       <span className="relative inline-block">
                         <span className="relative z-10">work</span>
@@ -104,16 +101,113 @@ export default function Page() {
                     </h1>
 
 
-                    <div className="w-full h-[600px] max-w-4xl bg-blue-600">
-
+                    <div className="w-full h-[400px] sm:h-[500px] md:h-[600px] max-w-4xl rounded-lg overflow-hidden shadow-2xl relative">
+                      <div className="absolute -bottom-4 -right-4 hidden md:block z-10">
+                        <Image 
+                          src="/odoo-assets/fireworks_01a.svg" 
+                          alt="decorative fireworks"
+                          width={100}
+                          height={100}
+                          className="opacity-40"
+                        />
+                      </div>
+                      <div className="grid grid-cols-2 gap-2 h-full p-2">
+                        <div className="relative rounded-lg overflow-hidden">
+                          <Image 
+                            src="/app-screenshots/pos-order-management.png" 
+                            alt="POS Order Management"
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
+                        <div className="relative rounded-lg overflow-hidden">
+                          <Image 
+                            src="/app-screenshots/purchase-invoice.png" 
+                            alt="Purchase Invoice"
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
+                        <div className="relative rounded-lg overflow-hidden">
+                          <Image 
+                            src="/app-screenshots/sync-order.png" 
+                            alt="Sync Order"
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
+                        <div className="relative rounded-lg overflow-hidden">
+                          <Image 
+                            src="/app-screenshots/purchase-confirm.png" 
+                            alt="Purchase Confirm"
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
+                      </div>
                     </div>
 
          </div>
 
 
 
-         <div className="w-full h-[400px]">
-
+         <div className="w-full min-h-[400px] px-4 py-16 relative">
+          <div className="absolute top-0 right-0 hidden lg:block">
+            <Image 
+              src="/odoo-assets/arrow_doodle_4.svg" 
+              alt="decorative arrow"
+              width={120}
+              height={120}
+              className="opacity-50"
+            />
+          </div>
+          <div className="max-w-6xl mx-auto">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+              <div className="flex-1 space-y-6">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0F1117]">
+                  See our apps in action
+                </h2>
+                <p className="text-lg sm:text-xl text-gray-600">
+                  Discover how our suite of business apps can transform your workflow and boost productivity.
+                </p>
+               
+              </div>
+              <div className="flex-1 grid grid-cols-2 gap-4 max-w-md">
+                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                  <Image 
+                    src="/app-screenshots/pos-shifts.png" 
+                    alt="POS Shifts"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                  <Image 
+                    src="/app-screenshots/supplier-table.png" 
+                    alt="Supplier Table"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                  <Image 
+                    src="/app-screenshots/chose-fromold-new.png" 
+                    alt="Choose Form"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                  <Image 
+                    src="/app-screenshots/pos-openning.png" 
+                    alt="POS Opening"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
          </div>
 
 

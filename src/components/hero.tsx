@@ -7,8 +7,8 @@ import { Button } from "./ui/button";
 export default function Hero() {
   return (
  <>
-    <section className="relative   py-16   curved-edge  ">
-      <MaxWidthWrapper className="h-fit mt-20">
+    <section className="relative   py-20   curved-edge  ">
+      <MaxWidthWrapper className="h-fit ">
         <div className="flex flex-col items-center  text-center gap-y-8 ">
           {/* HEADLINE */}
           <h1 className="relative font-caveat text-[4.8rem] md:text-[5.2rem] font-bold leading-tight text-[#0F1117]">
