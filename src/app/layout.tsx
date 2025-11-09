@@ -51,7 +51,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${caveat.variable} antialiased light`}>
+      <body className={`${poppins.variable} ${caveat.variable} antialiased light overflow-x-hidden`}>
         <SiteHeader />
         {children}
       </body>

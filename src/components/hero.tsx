@@ -7,8 +7,8 @@ import { Button } from "./ui/button";
 export default function Hero() {
   return (
  <>
-    <section className="relative   py-16   curved-edge ">
-      <MaxWidthWrapper className="h-fit">
+    <section className="relative   py-16   curved-edge  ">
+      <MaxWidthWrapper className="h-fit mt-20">
         <div className="flex flex-col items-center  text-center gap-y-8 ">
           {/* HEADLINE */}
           <h1 className="relative font-caveat text-[4.8rem] md:text-[5.2rem] font-bold leading-tight text-[#0F1117]">
@@ -58,9 +58,9 @@ export default function Hero() {
 
             {/* price text */}
             <div className="text-[#45ACAB] font-caveat text-2xl md:text-3xl rotate-[-6deg] ">
-              <span className="italic font-bold">50 DZD / commond</span>
+              <span className="italic text-3xl !font-[700]">50 DZD / commond</span>
               <br />
-              <span className="text-xl md:text-2xl font-bold">for each customer</span>
+              <span className="text-xl md:text-2xl !font-[700]">for each customer</span>
             </div>
           </div>
         </div>

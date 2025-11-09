@@ -18,10 +18,10 @@ export const SiteHeader = () => {
     }, [])
 
     return (
-        <div className={`w-full h-[70px] sticky top-0 z-50 bg-white overflow-visible transition-all duration-200 ${isScrolled ? "border-b" : ""}`}>
+        <div className={`w-full h-[70px] fixed top-0 z-50 bg-transparent  overflow-visible transition-all duration-200 ${isScrolled ? " py-2 " : ""}`}>
      
 
- <MaxWidthWrapper className="flex items-center justify-between h-[70px] relative overflow-visible gap-8">
+ <MaxWidthWrapper className={`flex items-center justify-between h-[70px] relative overflow-visible gap-8 ${isScrolled ? " border bg-white rounded-lg " : ""}`}>
   <div className="h-full w-fit flex items-center justify-start gap-x-4 overflow-visible">
       <h1 className="font-bold text-2xl">Jethings</h1>
   
