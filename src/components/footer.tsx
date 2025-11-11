@@ -1,18 +1,7 @@
-import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  Mail,
-  Phone,
-  MapPin,
-  ArrowRight,
-  Package,
-} from "lucide-react"
+import { Linkedin, Mail, Phone, MapPin } from "lucide-react"
 import MaxWidthWrapper from "./max-with-wrapper"
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
-
   const features = [
     "Web Development",
     "Mobile Apps",
@@ -23,14 +12,14 @@ export default function Footer() {
   const legalLinks = [
     { href: "/terms", label: "Terms of Service" },
     { href: "/privacy", label: "Privacy Policy" },
-    { href: "/cookies", label: "Cookie Management" },
-    { href: "/mentions", label: "Legal Notice" },
   ]
 
   const socialLinks = [
-    { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
-    { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/company/jethings",
+      label: "LinkedIn",
+    },
   ]
 
   return (
@@ -48,9 +37,10 @@ export default function Footer() {
                 <h3 className="text-xl font-bold text-black">Jethings</h3>
               </div>
               <p className="leading-relaxed text-gray-600 mb-4 text-sm">
-                Jethings is a development agency specializing in web development,
-                mobile apps, full-stack solutions, and custom software development.
-                We deliver high-quality solutions that drive business results.
+                Jethings is a development agency specializing in web
+                development, mobile apps, full-stack solutions, and custom
+                software development. We deliver high-quality solutions that
+                drive business results.
               </p>
             </div>
 
@@ -101,14 +91,14 @@ export default function Footer() {
                   className="flex items-start gap-2 text-sm text-gray-600 hover:text-black transition-colors group"
                 >
                   <Mail className="w-4 h-4 mt-0.5 flex-shrink-0 text-gray-400 group-hover:text-black transition-colors" />
-                  <span className="break-all">support@jethings.com</span>
+                  <span className="break-all">neggazfarid@gmail.com</span>
                 </a>
                 <a
                   href="tel:+213540261833"
                   className="flex items-start gap-2 text-sm text-gray-600 hover:text-black transition-colors group"
                 >
                   <Phone className="w-4 h-4 mt-0.5 flex-shrink-0 text-gray-400 group-hover:text-black transition-colors" />
-                  <span>+213 540 261 833</span>
+                  <span>+213 562001394</span>
                 </a>
                 <div className="flex items-start gap-2 text-sm text-gray-600">
                   <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-gray-400" />
@@ -138,26 +128,6 @@ export default function Footer() {
                     )
                   })}
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-200 bg-gray-50">
-          <div className="px-4 sm:px-6 lg:px-8 py-4">
-            <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
-              <p className="text-xs text-gray-600 text-center sm:text-left">
-                © {currentYear} Jethings. All rights reserved.
-              </p>
-
-              <div className="flex items-center gap-4 text-xs text-gray-600 flex-wrap justify-center">
-                <span className="flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
-                  Service operational
-                </span>
-                <span className="hidden sm:inline">•</span>
-                <span>Made in Algeria 🇩🇿</span>
               </div>
             </div>
           </div>
