@@ -1,10 +1,12 @@
 "use client"
 
+import SendRequestModal from "@/components/cta"
 import { Features } from "@/components/feature"
 import Footer from "@/components/footer"
 import Hero from "@/components/hero"
 import OurApproach from "@/components/our-approach"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function Page() {
   return (
@@ -238,12 +240,15 @@ export default function Page() {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-                <button className="button-33 cursor-pointer font-medium rounded-md transition text-base sm:text-lg md:text-xl !px-8 sm:!px-10 md:!px-12 !py-3 sm:!py-4">
-                  Get Started
-                </button>
-                <button className="cursor-pointer font-medium rounded-md transition text-base sm:text-lg md:text-xl px-8 sm:px-10 md:px-12 py-3 sm:py-4 bg-white border-2 border-gray-300 text-gray-900 hover:border-[#45ACAB] hover:text-[#45ACAB] hover:bg-gray-50">
-                  Schedule a Consultation
-                </button>
+                <SendRequestModal />
+                <Link
+                  href={"https://cal.com/craftednext/30min"}
+                  target="_blank"
+                >
+                  <button className="cursor-pointer font-medium rounded-md transition text-base sm:text-lg md:text-xl px-8 sm:px-10 md:px-12 py-3 sm:py-4 bg-white border-2 border-gray-300 text-gray-900 hover:border-[#45ACAB] hover:text-[#45ACAB] hover:bg-gray-50">
+                    Schedule a Consultation
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

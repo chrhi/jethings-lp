@@ -18,10 +18,12 @@ const caveat = Caveat({
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Jethings - Development Agency",
-    description: "Jethings is a development agency specializing in web development, mobile apps, full-stack solutions, and custom software development. We deliver high-quality solutions that drive business results.",
+    description:
+      "Jethings is a development agency specializing in web development, mobile apps, full-stack solutions, and custom software development. We deliver high-quality solutions that drive business results.",
     openGraph: {
       title: "Jethings - Development Agency",
-      description: "Jethings is a development agency specializing in web development, mobile apps, full-stack solutions, and custom software development. We deliver high-quality solutions that drive business results.",
+      description:
+        "Jethings is a development agency specializing in web development, mobile apps, full-stack solutions, and custom software development. We deliver high-quality solutions that drive business results.",
       url: "https://jethings.com",
       siteName: "Jethings",
       images: [
@@ -38,7 +40,8 @@ export async function generateMetadata(): Promise<Metadata> {
     twitter: {
       card: "summary_large_image",
       title: "Jethings - Development Agency",
-      description: "Jethings is a development agency specializing in web development, mobile apps, full-stack solutions, and custom software development.",
+      description:
+        "Jethings is a development agency specializing in web development, mobile apps, full-stack solutions, and custom software development.",
       images: ["/jethings-openghraf.png"],
     },
   }

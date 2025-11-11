@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import MaxWidthWrapper from "../max-with-wrapper"
 import { MobileNavigation } from "./navigations/mobil-navigation"
+import SendRequestModal from "../cta"
 
 const navItems = [
   { id: "home", label: "Home" },
@@ -22,18 +23,20 @@ export const SiteHeader = () => {
       setIsScrolled(window.scrollY > 0)
 
       // Update active section based on scroll position
-      const sections = navItems.map((item) => {
-        const element = document.getElementById(item.id)
-        if (element) {
-          const rect = element.getBoundingClientRect()
-          return {
-            id: item.id,
-            top: rect.top,
-            bottom: rect.bottom,
+      const sections = navItems
+        .map((item) => {
+          const element = document.getElementById(item.id)
+          if (element) {
+            const rect = element.getBoundingClientRect()
+            return {
+              id: item.id,
+              top: rect.top,
+              bottom: rect.bottom,
+            }
           }
-        }
-        return null
-      }).filter(Boolean)
+          return null
+        })
+        .filter(Boolean)
 
       const currentSection = sections.find((section) => {
         if (!section) return false
@@ -105,13 +108,7 @@ export const SiteHeader = () => {
 
         {/* CTA Button */}
         <div className="flex items-center justify-end gap-x-2 lg:gap-x-4 h-full">
-          <button
-            onClick={() => scrollToSection("contact")}
-            className="button-33 cursor-pointer text-sm md:text-base hidden lg:flex"
-            role="button"
-          >
-            <span className="text">Get Started</span>
-          </button>
+          <SendRequestModal />
         </div>
 
         {/* Mobile Menu */}

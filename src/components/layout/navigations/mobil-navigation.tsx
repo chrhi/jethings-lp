@@ -61,14 +61,6 @@ export function MobileNavigation({ scrollToSection }: MobileNavigationProps) {
               </li>
             ))}
           </ul>
-          <div className="mt-6 pt-6 border-t">
-            <button
-              onClick={() => handleNavClick("contact")}
-              className="button-33 cursor-pointer w-full text-center"
-            >
-              <span className="text">Get Started</span>
-            </button>
-          </div>
         </nav>
       </SheetContent>
     </Sheet>

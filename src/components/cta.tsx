@@ -1,0 +1,230 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+"use client"
+
+import * as React from "react"
+import { useForm } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
+import * as z from "zod"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form"
+
+import toast from "react-hot-toast"
+
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog"
+
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+} from "@/components/ui/drawer"
+
+const formSchema = z.object({
+  fullName: z.string().min(2, "Name is required"),
+  phone: z.string().min(8, "Invalid phone number"),
+  email: z.string().email("Invalid email address"),
+  description: z.string().min(10, "Please describe your project"),
+})
+
+export default function SendRequestModal() {
+  const [open, setOpen] = React.useState(false)
+  const [isDesktop, setIsDesktop] = React.useState(false)
+
+  const [loading, setLoading] = React.useState(false)
+  const [success, setSuccess] = React.useState<string | null>(null)
+  const [error, setError] = React.useState<string | null>(null)
+
+  React.useEffect(() => {
+    const checkScreen = () => setIsDesktop(window.innerWidth >= 768)
+    checkScreen()
+    window.addEventListener("resize", checkScreen)
+    return () => window.removeEventListener("resize", checkScreen)
+  }, [])
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      fullName: "",
+      phone: "",
+      email: "",
+      description: "",
+    },
+  })
+
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setLoading(true)
+    setSuccess(null)
+    setError(null)
+
+    try {
+      const res = await fetch("/api/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      })
+
+      if (!res.ok) {
+        throw new Error("Failed to send email")
+      }
+      toast.success("Your request has been sent successfully")
+      setSuccess("✅ Your request has been sent successfully")
+      form.reset()
+      setOpen(false) // close modal/drawer
+
+      // ✅ Fire Facebook Pixel Lead event
+      if (typeof window !== "undefined" && (window as any).fbq) {
+        ;(window as any).fbq("track", "Lead", {
+          name: values.fullName,
+          email: values.email,
+          phone: values.phone,
+        })
+      }
+    } catch (err: any) {
+      setError(err.message || "An unexpected error occurred")
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const FormContent = (
+    <div className="w-full p-2">
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          {/* Full Name */}
+          <FormField
+            control={form.control}
+            name="fullName"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Full Name</FormLabel>
+                <FormControl>
+                  <Input placeholder="Enter your full name" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          {/* Phone */}
+          <FormField
+            control={form.control}
+            name="phone"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Phone Number</FormLabel>
+                <FormControl>
+                  <Input placeholder="Example: +1 234 567 8900" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          {/* Email */}
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Email Address</FormLabel>
+                <FormControl>
+                  <Input placeholder="your@email.com" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          {/* Project Description */}
+          <FormField
+            control={form.control}
+            name="description"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Project Description</FormLabel>
+                <FormControl>
+                  <Textarea
+                    placeholder="Briefly describe your project or request"
+                    className="min-h-[120px]"
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          {/* Submit */}
+          <Button type="submit" className="w-full" disabled={loading}>
+            {loading ? "Sending..." : "Send Request"}
+          </Button>
+
+          {success && <p className="text-green-600">{success}</p>}
+          {error && <p className="text-red-600">{error}</p>}
+        </form>
+      </Form>
+    </div>
+  )
+
+  return (
+    <>
+      <button
+        onClick={() => setOpen(true)}
+        className="button-33 cursor-pointer font-medium rounded-md transition text-lg sm:text-lg md:text-xl !px-8 sm:!px-10 md:!px-12 !py-[0.9rem] sm:!py-4"
+      >
+        Get Started
+      </button>
+
+      {isDesktop ? (
+        <Dialog open={open} onOpenChange={setOpen}>
+          <DialogContent className="sm:max-w-[600px]">
+            <DialogHeader>
+              <DialogTitle>Send a Request</DialogTitle>
+              <DialogDescription>
+                Fill out the form below and we'll get back to you as soon as
+                possible.
+              </DialogDescription>
+            </DialogHeader>
+            {FormContent}
+          </DialogContent>
+        </Dialog>
+      ) : (
+        <Drawer open={open} onOpenChange={setOpen}>
+          <DrawerContent>
+            <DrawerHeader>
+              <DrawerTitle>Send a Request</DrawerTitle>
+              <DrawerDescription>
+                Fill out the form below and we'll get back to you as soon as
+                possible.
+              </DrawerDescription>
+            </DrawerHeader>
+            {FormContent}
+            <DrawerFooter className="pt-2">
+              <DrawerClose asChild>
+                <Button variant="outline">Cancel</Button>
+              </DrawerClose>
+            </DrawerFooter>
+          </DrawerContent>
+        </Drawer>
+      )}
+    </>
+  )
+}

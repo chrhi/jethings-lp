@@ -3,6 +3,8 @@
 import Image from "next/image"
 import MaxWidthWrapper from "./max-with-wrapper"
 import { Button } from "./ui/button"
+import Link from "next/link"
+import SendRequestModal from "./cta"
 
 export default function Hero() {
   return (
@@ -44,16 +46,17 @@ export default function Hero() {
 
             {/* BUTTONS */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-4 sm:mt-6">
-              <button className="button-33 cursor-pointer font-medium rounded-md transition text-lg sm:text-lg md:text-xl !px-8 sm:!px-10 md:!px-12 !py-[0.9rem] sm:!py-4">
-                Get Started
-              </button>
-              <Button
-                className="cursor-pointer text-lg sm:text-lg md:text-xl !px-8 sm:!px-10 md:!px-12 !py-[0.9rem] sm:!py-4"
-                variant={"outline"}
-                size={"lg"}
-              >
-                Schedule a Consultation
-              </Button>
+              <SendRequestModal />
+
+              <Link href={"https://cal.com/craftednext/30min"} target="_blank">
+                <Button
+                  className="cursor-pointer text-lg sm:text-lg md:text-xl !px-8 sm:!px-10 md:!px-12 !py-[0.9rem] sm:!py-4"
+                  variant={"ghost"}
+                  size={"lg"}
+                >
+                  Schedule a Consultation
+                </Button>
+              </Link>
             </div>
           </div>
         </MaxWidthWrapper>
