@@ -3,7 +3,9 @@
 import { useState, useEffect } from "react"
 import MaxWidthWrapper from "../max-with-wrapper"
 import { MobileNavigation } from "./navigations/mobil-navigation"
+
 import SendRequestModal from "../cta"
+import Link from "next/link"
 
 const navItems = [
   { id: "home", label: "Home" },
@@ -108,7 +110,14 @@ export const SiteHeader = () => {
 
         {/* CTA Button */}
         <div className="flex items-center justify-end gap-x-2 lg:gap-x-4 h-full">
-          <SendRequestModal />
+          <Link href={"https://cal.com/craftednext/30min"} target="_blank">
+            <button
+              className="button-33 cursor-pointer text-sm md:text-base hidden lg:flex"
+              role="button"
+            >
+              <span className="text">Get Started</span>
+            </button>
+          </Link>
         </div>
 
         {/* Mobile Menu */}
