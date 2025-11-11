@@ -9,34 +9,34 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: "Qu’est-ce que votre logiciel de gestion de stock ?",
+      question: "What services do you offer?",
       answer:
-        "C’est un outil simple et gratuit qui vous permet de suivre vos produits, éviter les ruptures de stock, et gérer vos inventaires en temps réel.",
+        "We offer comprehensive development services including web development (React, Next.js), mobile app development (iOS, Android, cross-platform), full-stack solutions, custom software development, API development, UI/UX design, cloud solutions, and ongoing maintenance and support.",
     },
     {
-      question: "Est-ce vraiment gratuit ?",
+      question: "What technologies do you use?",
       answer:
-        "Oui, notre logiciel est entièrement gratuit, sans frais cachés et sans carte bancaire requise. Vous pouvez l’utiliser sans limite.",
+        "We work with modern technologies including React, Next.js, TypeScript, Node.js, Python, and various mobile frameworks. We choose the best technology stack based on your project requirements and business goals.",
     },
     {
-      question: "Qui peut utiliser ce logiciel ?",
+      question: "How long does a project take?",
       answer:
-        "Il est conçu pour les petites entreprises, les commerçants, les grossistes et même les boutiques en ligne qui veulent simplifier la gestion de leurs stocks.",
+        "Project timelines vary based on scope and complexity. A simple website might take 2-4 weeks, while a full-stack application could take 2-6 months. We provide detailed timelines during the initial consultation and keep you updated throughout the development process.",
     },
     {
-      question: "Puis-je accéder à mes données de n’importe où ?",
+      question: "Do you provide ongoing support?",
       answer:
-        "Absolument ! Notre solution est basée sur le cloud. Vous pouvez accéder à vos stocks depuis un ordinateur, une tablette ou un smartphone, où que vous soyez.",
+        "Yes, we offer comprehensive maintenance and support services. This includes bug fixes, updates, security patches, feature enhancements, and technical support to ensure your systems run smoothly long after launch.",
     },
     {
-      question: "Est-ce que mes données sont sécurisées ?",
+      question: "What's your development process?",
       answer:
-        "Oui, nous utilisons des technologies de sécurité avancées pour protéger vos données et garantir leur confidentialité.",
+        "We follow an agile development methodology with regular communication and iterative releases. Our process includes discovery and planning, design, development, testing, deployment, and ongoing support. We keep you involved at every stage.",
     },
     {
-      question: "Comment commencer à utiliser le logiciel ?",
+      question: "Can you work with existing systems?",
       answer:
-        "C’est très simple ! Cliquez sur « Rejoindre la liste d’attente » ou « Commencer gratuitement », créez un compte, et commencez à gérer vos stocks immédiatement.",
+        "Absolutely! We specialize in integrating with existing systems and can work with your current infrastructure. We can build APIs, create integrations, migrate data, or enhance existing applications to meet your evolving needs.",
     },
   ];
 
@@ -56,11 +56,11 @@ export default function FAQ() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-5xl font-bold text-gray-900 mb-4">
-            Foire aux Questions
+            Frequently Asked Questions
           </h2>
           <p className="text-gray-600 max-w-4xl">
-            Voici les réponses aux questions les plus fréquentes sur notre
-            logiciel de gestion de stock gratuit.
+            Find answers to common questions about our development services,
+            processes, and how we can help transform your business.
           </p>
         </motion.div>
 

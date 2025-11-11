@@ -14,10 +14,10 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   const features = [
-    "Real-time stock tracking",
-    "Stock-out alerts",
-    "Reports and analytics",
-    "Multi-warehouse management",
+    "Web Development",
+    "Mobile Apps",
+    "Custom Software",
+    "Cloud Solutions",
   ]
 
   const legalLinks = [
@@ -48,16 +48,16 @@ export default function Footer() {
                 <h3 className="text-xl font-bold text-black">Jethings</h3>
               </div>
               <p className="leading-relaxed text-gray-600 mb-4 text-sm">
-                Jethings is a free inventory management software that helps you
-                track your products, prevent stock-outs, and automate your
-                inventories with ease.
+                Jethings is a development agency specializing in web development,
+                mobile apps, full-stack solutions, and custom software development.
+                We deliver high-quality solutions that drive business results.
               </p>
             </div>
 
-            {/* Features */}
+            {/* Services */}
             <div className="lg:col-span-3">
               <h4 className="text-sm font-semibold mb-4 text-black">
-                Features
+                Services
               </h4>
               <ul className="space-y-2">
                 {features.map((feature, index) => (

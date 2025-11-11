@@ -46,7 +46,7 @@ export default function Header() {
             height={40}
             className="flex-shrink-0"
           />
-          <Button disabled>Rejoindre la liste d'attente</Button>
+          <Button>Get Started</Button>
         </div>
 
         {/* Mobile layout - centered logo only */}

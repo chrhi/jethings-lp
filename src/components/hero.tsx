@@ -7,14 +7,14 @@ import { Button } from "./ui/button"
 export default function Hero() {
   return (
     <>
-      <section className="relative py-12 sm:py-16 md:py-20 curved-edge">
+      <section className="relative py-12 sm:py-16 md:py-20  w-full ">
         <MaxWidthWrapper className="h-fit">
           <div className="flex flex-col items-center text-center gap-y-6 sm:gap-y-8">
             {/* HEADLINE */}
             <h1 className="relative font-caveat text-[3rem] sm:text-[3.6rem] md:text-[5rem] lg:text-[5.2rem] font-bold leading-tight text-[#0F1117]">
-              Pushing commerce further and{" "}
+              Building solutions that drive{" "}
               <span className="relative inline-block">
-                <span className="relative z-10">beyond.</span>
+                <span className="relative z-10">business results.</span>
                 <Image
                   src="/odoo-assets/highlights/yellow_highlight_bold_05.svg"
                   alt="highlight"
@@ -28,9 +28,9 @@ export default function Hero() {
 
             {/* SUBHEADLINE */}
             <p className="relative font-semibold font-caveat text-[1.75rem] sm:text-[1.9rem] md:text-[2.75rem] lg:text-[3rem] text-[#0F1117]">
-              Powerful, intuitive, yet{" "}
+              Fast delivery, exceptional{" "}
               <span className="relative inline-block">
-                <span className="relative z-10">affordable!</span>
+                <span className="relative z-10">quality, reliable.</span>
                 <Image
                   src="/odoo-assets/highlights/blue_highlight_01.svg"
                   alt="highlight"
@@ -45,36 +45,15 @@ export default function Hero() {
             {/* BUTTONS */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-4 sm:mt-6">
               <button className="button-33 cursor-pointer font-medium rounded-md transition text-lg sm:text-lg md:text-xl !px-8 sm:!px-10 md:!px-12 !py-[0.9rem] sm:!py-4">
-                Start now – It’s free
+                Get Started
               </button>
               <Button
                 className="cursor-pointer text-lg sm:text-lg md:text-xl !px-8 sm:!px-10 md:!px-12 !py-[0.9rem] sm:!py-4"
                 variant={"outline"}
                 size={"lg"}
               >
-                Meet an advisor
+                Schedule a Consultation
               </Button>
-            </div>
-
-            {/* PRICE LABEL WITH ARROW */}
-            <div className="hidden md:block absolute mt-64 right-36">
-              <Image
-                src={"/odoo-assets/arrow_doodle_1.svg"}
-                width={50}
-                height={100}
-                alt="arrow"
-              />
-
-              {/* price text */}
-              <div className="text-[#45ACAB] font-caveat text-xl lg:text-2xl rotate-[-6deg]">
-                <span className="italic text-2xl lg:text-3xl !font-[700]">
-                  50 DZD / commond
-                </span>
-                <br />
-                <span className="text-lg lg:text-2xl !font-[700]">
-                  for each customer
-                </span>
-              </div>
             </div>
           </div>
         </MaxWidthWrapper>

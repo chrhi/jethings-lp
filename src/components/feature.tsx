@@ -7,52 +7,52 @@ import MaxWidthWrapper from "./max-with-wrapper"
 export const Features = () => {
   const features = [
     {
-      name: "POS Opening",
+      name: "Web Development",
       image: "/app-screenshots/pos-openning.png",
       description:
-        "Streamline your day with lightning-fast system initialization. Get your point of sale ready in seconds with an intuitive startup process.",
+        "Modern, responsive web applications built with React, Next.js, and TypeScript. Scalable solutions that grow with your business.",
     },
     {
-      name: "Order Management",
+      name: "Mobile App Development",
       image: "/app-screenshots/pos-order-management.png",
       description:
-        "Take full control of your orders with real-time tracking, instant updates, and powerful filtering options that keep you ahead of demand.",
+        "Native iOS and Android apps, plus cross-platform solutions. Delivering seamless mobile experiences that engage your users.",
     },
     {
-      name: "POS Shifts",
+      name: "Full-Stack Solutions",
       image: "/app-screenshots/pos-shifts.png",
       description:
-        "Effortlessly manage employee schedules, track performance metrics, and maintain accountability with comprehensive shift monitoring.",
+        "End-to-end development from frontend to backend. Complete systems with APIs, databases, and cloud infrastructure.",
     },
     {
-      name: "Sync Order",
+      name: "Custom Software",
       image: "/app-screenshots/sync-order.png",
       description:
-        "Keep your entire operation in perfect harmony. Orders sync instantly across all locations, ensuring consistency and preventing errors.",
+        "Tailored software solutions designed specifically for your business needs. Built to solve your unique challenges.",
     },
     {
-      name: "Purchase Invoice",
+      name: "API Development",
       image: "/app-screenshots/purchase-invoice.png",
       description:
-        "Generate professional invoices in moments. Automated calculations, customizable templates, and seamless record-keeping built right in.",
+        "RESTful and GraphQL APIs with seamless integrations. Connect your systems and enable powerful workflows.",
     },
     {
-      name: "Purchase Confirm",
+      name: "UI/UX Design",
       image: "/app-screenshots/purchase-confirm.png",
       description:
-        "Verify every transaction with confidence. Smart confirmation workflows prevent costly mistakes before they happen.",
+        "Beautiful, intuitive interfaces that users love. User-centered design that drives engagement and conversions.",
     },
     {
-      name: "Supplier Management",
+      name: "Cloud & DevOps",
       image: "/app-screenshots/supplier-table.png",
       description:
-        "Build and maintain strong supplier relationships with a centralized database that tracks contacts, orders, and performance history.",
+        "Scalable cloud infrastructure and automated deployments. Reliable hosting and continuous integration pipelines.",
     },
     {
-      name: "Flexible Interface",
+      name: "Maintenance & Support",
       image: "/app-screenshots/chose-fromold-new.png",
       description:
-        "Choose your perfect workflow. Seamlessly switch between classic and modern interfaces to match your team's preferences and experience.",
+        "Ongoing support and maintenance to keep your systems running smoothly. Long-term partnerships for sustained success.",
     },
   ]
 
@@ -80,14 +80,14 @@ export const Features = () => {
         {/* Header */}
         <div className="max-w-full mr-auto text-start space-y-6 mb-20">
           <h2 className="text-4xl md:text-6xl font-caveat font-bold text-gray-900 leading-tight">
-            Everything You Need to
+            Complete Development
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#45ACAB] to-[#00eae6]">
-              Run Your Business
+              Solutions
             </span>
           </h2>
           <p className="text-gray-600  mx-auto text-lg font-caveat leading-relaxed">
-            A comprehensive point of sale system designed to simplify
-            operations, boost efficiency, and scale with your business.
+            From web and mobile apps to custom software solutions. We deliver
+            high-quality development services that drive real business results.
           </p>
         </div>
 

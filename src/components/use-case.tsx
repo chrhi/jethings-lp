@@ -3,61 +3,112 @@
 import { motion } from "framer-motion";
 import MaxWidthWrapper from "./max-with-wrapper";
 import {
-  Store,
+  ShoppingCart,
+  Cloud,
   Building2,
-  Warehouse,
+  Rocket,
+  Smartphone,
+  Briefcase,
   ArrowRight,
   CheckCircle2,
 } from "lucide-react";
 
 const useCases = [
   {
-    id: "retail",
-    name: "Retail Stores",
-    icon: Store,
+    id: "ecommerce",
+    name: "E-commerce Solutions",
+    icon: ShoppingCart,
     description:
-      "Perfect for small boutiques and retail shops. Manage inventory, process sales quickly, and track best-selling products with ease.",
+      "Complete online store platforms with payment integration, inventory management, and seamless shopping experiences that drive sales.",
     benefits: [
-      "Quick checkout process",
-      "Real-time inventory tracking",
-      "Sales analytics",
-      "Customer management",
+      "Payment gateway integration",
+      "Inventory management",
+      "Order processing system",
+      "Customer dashboard",
     ],
     gradient: "from-blue-500 via-cyan-500 to-teal-500",
     bgGradient: "from-blue-50 to-cyan-50",
     iconBg: "bg-blue-500",
   },
   {
-    id: "enterprise",
-    name: "Enterprise",
-    icon: Building2,
+    id: "saas",
+    name: "SaaS Applications",
+    icon: Cloud,
     description:
-      "Manage internal inventory, control resource consumption, and analyze usage patterns. Ideal for large organizations.",
+      "Scalable software-as-a-service platforms with subscription management, multi-tenancy, and cloud infrastructure for rapid growth.",
     benefits: [
-      "Multi-location support",
-      "Advanced analytics",
-      "Role-based access",
-      "Custom integrations",
+      "Subscription management",
+      "Multi-tenant architecture",
+      "Scalable infrastructure",
+      "Analytics dashboard",
     ],
     gradient: "from-purple-500 via-pink-500 to-rose-500",
     bgGradient: "from-purple-50 to-pink-50",
     iconBg: "bg-purple-500",
   },
   {
-    id: "warehouse",
-    name: "Warehouses",
-    icon: Warehouse,
+    id: "enterprise",
+    name: "Enterprise Software",
+    icon: Building2,
     description:
-      "Track stock movements, control batches, and ensure complete product traceability. Optimize your warehouse operations.",
+      "Custom enterprise solutions with advanced security, role-based access, and integrations that streamline complex business operations.",
     benefits: [
-      "Batch tracking",
-      "Movement history",
-      "Complete traceability",
-      "Warehouse optimization",
+      "Enterprise security",
+      "Role-based access control",
+      "System integrations",
+      "Custom workflows",
     ],
     gradient: "from-orange-500 via-amber-500 to-yellow-500",
     bgGradient: "from-orange-50 to-amber-50",
     iconBg: "bg-orange-500",
+  },
+  {
+    id: "startup",
+    name: "Startup MVPs",
+    icon: Rocket,
+    description:
+      "Rapid MVP development to validate your idea quickly. Fast, cost-effective solutions that get you to market faster.",
+    benefits: [
+      "Rapid development",
+      "Cost-effective solutions",
+      "Quick time-to-market",
+      "Scalable foundation",
+    ],
+    gradient: "from-green-500 via-emerald-500 to-teal-500",
+    bgGradient: "from-green-50 to-emerald-50",
+    iconBg: "bg-green-500",
+  },
+  {
+    id: "mobile",
+    name: "Mobile Applications",
+    icon: Smartphone,
+    description:
+      "Native and cross-platform mobile apps for iOS and Android. Engaging user experiences that keep users coming back.",
+    benefits: [
+      "Native performance",
+      "Cross-platform support",
+      "Push notifications",
+      "Offline capabilities",
+    ],
+    gradient: "from-indigo-500 via-purple-500 to-pink-500",
+    bgGradient: "from-indigo-50 to-purple-50",
+    iconBg: "bg-indigo-500",
+  },
+  {
+    id: "custom",
+    name: "Custom Business Tools",
+    icon: Briefcase,
+    description:
+      "Tailored software solutions designed for your specific business needs. Automate workflows and boost productivity.",
+    benefits: [
+      "Custom workflows",
+      "Process automation",
+      "Data management",
+      "Business intelligence",
+    ],
+    gradient: "from-red-500 via-rose-500 to-pink-500",
+    bgGradient: "from-red-50 to-rose-50",
+    iconBg: "bg-red-500",
   },
 ];
 
@@ -106,18 +157,18 @@ export default function UseCases() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Perfect for Every{" "}
-            <span className="text-[#45acab]">Business Type</span>
+            Solutions for Every{" "}
+            <span className="text-[#45acab]">Business Need</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-            Whether you're a small retail store or a large enterprise, we have
-            the perfect solution for your needs
+            From startups to enterprises, we deliver custom development solutions
+            tailored to your unique requirements and goals
           </p>
         </motion.div>
 
         {/* Use Cases Grid */}
         <motion.div
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
