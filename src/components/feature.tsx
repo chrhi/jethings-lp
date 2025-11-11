@@ -1,153 +1,137 @@
-"use client";
+"use client"
 
-import Image from "next/image";
-import * as React from "react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import * as React from "react"
+
+import MaxWidthWrapper from "./max-with-wrapper"
 
 export const Features = () => {
   const features = [
-    { name: "POS Opening", image: "/app-screenshots/pos-openning.png" },
-    { name: "Order Management", image: "/app-screenshots/pos-order-management.png" },
-    { name: "POS Shifts", image: "/app-screenshots/pos-shifts.png" },
-    { name: "Sync Order", image: "/app-screenshots/sync-order.png" },
-    { name: "Purchase Invoice", image: "/app-screenshots/purchase-invoice.png" },
-    { name: "Purchase Confirm", image: "/app-screenshots/purchase-confirm.png" },
-    { name: "Supplier Table", image: "/app-screenshots/supplier-table.png" },
-    { name: "Choose Form", image: "/app-screenshots/chose-fromold-new.png" },
-  ];
+    {
+      name: "POS Opening",
+      image: "/app-screenshots/pos-openning.png",
+      description:
+        "Streamline your day with lightning-fast system initialization. Get your point of sale ready in seconds with an intuitive startup process.",
+    },
+    {
+      name: "Order Management",
+      image: "/app-screenshots/pos-order-management.png",
+      description:
+        "Take full control of your orders with real-time tracking, instant updates, and powerful filtering options that keep you ahead of demand.",
+    },
+    {
+      name: "POS Shifts",
+      image: "/app-screenshots/pos-shifts.png",
+      description:
+        "Effortlessly manage employee schedules, track performance metrics, and maintain accountability with comprehensive shift monitoring.",
+    },
+    {
+      name: "Sync Order",
+      image: "/app-screenshots/sync-order.png",
+      description:
+        "Keep your entire operation in perfect harmony. Orders sync instantly across all locations, ensuring consistency and preventing errors.",
+    },
+    {
+      name: "Purchase Invoice",
+      image: "/app-screenshots/purchase-invoice.png",
+      description:
+        "Generate professional invoices in moments. Automated calculations, customizable templates, and seamless record-keeping built right in.",
+    },
+    {
+      name: "Purchase Confirm",
+      image: "/app-screenshots/purchase-confirm.png",
+      description:
+        "Verify every transaction with confidence. Smart confirmation workflows prevent costly mistakes before they happen.",
+    },
+    {
+      name: "Supplier Management",
+      image: "/app-screenshots/supplier-table.png",
+      description:
+        "Build and maintain strong supplier relationships with a centralized database that tracks contacts, orders, and performance history.",
+    },
+    {
+      name: "Flexible Interface",
+      image: "/app-screenshots/chose-fromold-new.png",
+      description:
+        "Choose your perfect workflow. Seamlessly switch between classic and modern interfaces to match your team's preferences and experience.",
+    },
+  ]
 
-  const [currentIndex, setCurrentIndex] = React.useState(0);
-  const [api, setApi] = React.useState<any>(null);
+  const [currentIndex, setCurrentIndex] = React.useState(0)
+  const [api, setApi] = React.useState<any>(null)
 
-  // Track carousel selection
   React.useEffect(() => {
-    if (!api) return;
+    if (!api) return
 
     const onSelect = () => {
-      setCurrentIndex(api.selectedScrollSnap());
-    };
+      setCurrentIndex(api.selectedScrollSnap())
+    }
 
-    api.on("select", onSelect);
-    onSelect(); // Set initial index
+    api.on("select", onSelect)
+    onSelect()
 
     return () => {
-      api.off("select", onSelect);
-    };
-  }, [api]);
-
-  // Get previous 3 images (wrapping around)
-  const getPreviousImages = () => {
-    const prev = [];
-    for (let i = 0; i < 3; i++) {
-      const idx = (currentIndex - 3 + i + features.length) % features.length;
-      prev.push(features[idx]);
+      api.off("select", onSelect)
     }
-    return prev;
-  };
-
-  // Get next 3 images (wrapping around)
-  const getNextImages = () => {
-    const next = [];
-    for (let i = 0; i < 3; i++) {
-      const idx = (currentIndex + 1 + i) % features.length;
-      next.push(features[idx]);
-    }
-    return next;
-  };
+  }, [api])
 
   return (
-    <section className="w-full px-4 py-10 ">
-      <div className="max-w-6xl mx-auto text-start space-y-4">
-        <h2 className="text-3xl md:text-5xl font-semibold text-gray-900 font-caveat ">POS Features</h2>
-        <p className="text-gray-600 max-w-2xl text-start font-caveat text-2xl leading-relaxed">
-          A modern and intuitive point of sale experience — built to simplify operations and improve efficiency.
-        </p>
-      </div>
-
-      {/* Modern layered images section with carousel */}
-      <div className="relative mt-20 flex justify-center items-center group">
-        {/* Left faint images */}
-        <div className="hidden md:flex absolute -left-24 top-1/2 -translate-y-1/2 space-x-[-60px]">
-          {getPreviousImages().map((item, i) => (
-            <div key={i} className="relative w-[260px] h-[170px] opacity-30 scale-90">
-              <Image
-                src={item.image}
-                alt={item.name}
-                fill
-                className="object-cover rounded-xl border border-gray-200 shadow-sm"
-              />
-            </div>
-          ))}
+    <section className="w-full px-4 py-20 bg-gradient-to-b  overflow-hidden">
+      <MaxWidthWrapper>
+        {/* Header */}
+        <div className="max-w-full mr-auto text-start space-y-6 mb-20">
+          <h2 className="text-4xl md:text-6xl font-caveat font-bold text-gray-900 leading-tight">
+            Everything You Need to
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#45ACAB] to-[#00eae6]">
+              Run Your Business
+            </span>
+          </h2>
+          <p className="text-gray-600  mx-auto text-lg font-caveat leading-relaxed">
+            A comprehensive point of sale system designed to simplify
+            operations, boost efficiency, and scale with your business.
+          </p>
         </div>
 
-        {/* Center main image with carousel */}
-        <div className="relative z-10 w-[700px] max-w-full">
-          <Carousel
-            className="w-full"
-            opts={{
-              align: "center",
-              loop: true,
-            }}
-            setApi={setApi}
-          >
-            <CarouselContent>
-              {features.map((item, index) => (
-                <CarouselItem key={index}>
-                  <div className="relative w-full h-[440px] rounded overflow-hidden border border-gray-200 shadow-lg bg-white">
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          </Carousel>
-        </div>
-
-        {/* Right faint images */}
-        <div className="hidden md:flex absolute -right-24 top-1/2 -translate-y-1/2 space-x-[-60px]">
-          {getNextImages().map((item, i) => (
-            <div key={i} className="relative w-[260px] h-[170px] opacity-30 scale-90">
-              <Image
-                src={item.image}
-                alt={item.name}
-                fill
-                className="object-cover rounded-xl border border-gray-200 shadow-sm"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Text grid */}
-      <div className="max-w-5xl mx-auto mt-24 grid grid-cols-1 md:grid-cols-2 gap-12 ">
-        {features.map((item, index) => (
-          <div key={index} className="space-y-2">
-            <h3 className="text-xl font-semibold text-gray-800">{item.name}</h3>
-            <p className="text-gray-600 text-base leading-relaxed">
-              {index === 0 && "Quickly open and initialize your point of sale system."}
-              {index === 1 && "Manage and track all orders in real-time."}
-              {index === 2 && "Monitor employee shifts with ease."}
-              {index === 3 && "Sync orders seamlessly across locations."}
-              {index === 4 && "Create and manage purchase invoices effortlessly."}
-              {index === 5 && "Confirm purchases before completing transactions."}
-              {index === 6 && "Maintain a database of suppliers and vendors."}
-              {index === 7 && "Switch between legacy and modern form interfaces."}
-            </p>
+        {/* Feature grid */}
+        <div className="max-w-full ">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((item, index) => (
+              <button
+                key={index}
+                onClick={() => api?.scrollTo(index)}
+                className={`group text-left p-6 rounded-xl transition-all duration-300 hover:shadow-xl ${
+                  index === currentIndex
+                    ? "bg-gradient-to-br from-blue-50 to-purple-50 border-2 border-blue-200 shadow-lg"
+                    : "bg-white border border-gray-200 hover:border-blue-300"
+                }`}
+              >
+                <div
+                  className={`inline-flex items-center justify-center w-12 h-12 rounded-lg mb-4 transition-colors ${
+                    index === currentIndex
+                      ? "bg-[#45ACAB] text-white"
+                      : "bg-gray-100 text-gray-600 group-hover:bg-blue-100 group-hover:text-[#45ACAB]"
+                  }`}
+                >
+                  <span className="text-xl font-bold">{index + 1}</span>
+                </div>
+                <h4
+                  className={`text-lg font-semibold mb-2 transition-colors ${
+                    index === currentIndex ? "text-blue-900" : "text-gray-900"
+                  }`}
+                >
+                  {item.name}
+                </h4>
+                <p
+                  className={`text-sm leading-relaxed transition-colors ${
+                    index === currentIndex ? "text-gray-700" : "text-gray-600"
+                  }`}
+                >
+                  {item.description}
+                </p>
+              </button>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
+      </MaxWidthWrapper>
     </section>
-  );
-};
+  )
+}

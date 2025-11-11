@@ -1,19 +1,19 @@
-import type { Metadata } from "next";
-import { Poppins, Caveat } from "next/font/google";
-import "./globals.css";
-import { SiteHeader } from "@/components/layout/side-header";
+import type { Metadata } from "next"
+import { Poppins, Caveat } from "next/font/google"
+import "./globals.css"
+import { SiteHeader } from "@/components/layout/side-header"
 
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
-});
+})
 
 const caveat = Caveat({
   variable: "--font-caveat",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-});
+})
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -41,20 +41,22 @@ export async function generateMetadata(): Promise<Metadata> {
       description: "Stock management software",
       images: ["/jethings-openghraf.png"],
     },
-  };
+  }
 }
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${caveat.variable} antialiased light overflow-x-hidden`}>
+      <body
+        className={`${poppins.variable} ${caveat.variable} antialiased light overflow-x-hidden`}
+      >
         <SiteHeader />
         {children}
       </body>
     </html>
-  );
+  )
 }

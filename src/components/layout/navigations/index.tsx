@@ -2,15 +2,15 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { 
-  ShoppingCart, 
-  Package, 
-  Users, 
-  Building2, 
-  TrendingUp, 
+import {
+  ShoppingCart,
+  Package,
+  Users,
+  Building2,
+  TrendingUp,
   Store,
   Clock,
-  ChevronRight
+  ChevronRight,
 } from "lucide-react"
 
 import { useIsMobile } from "@/hooks/use-mobile"
@@ -21,7 +21,6 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 
 const solutions = [
@@ -58,19 +57,22 @@ const features = [
   {
     title: "POS System",
     href: "/features/pos",
-    description: "Fast, intuitive checkout with payment processing and receipt management",
+    description:
+      "Fast, intuitive checkout with payment processing and receipt management",
     icon: ShoppingCart,
   },
   {
     title: "Stock Management",
     href: "/features/stock",
-    description: "Track inventory levels, manage warehouses, and automate reordering",
+    description:
+      "Track inventory levels, manage warehouses, and automate reordering",
     icon: Package,
   },
   {
     title: "Sales Analytics",
     href: "/features/sales",
-    description: "Comprehensive sales reporting and business intelligence dashboard",
+    description:
+      "Comprehensive sales reporting and business intelligence dashboard",
     icon: TrendingUp,
   },
   {
@@ -182,17 +184,14 @@ export function Navigation() {
                       Enterprise Solutions
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
-                      Powerful tools and dedicated support for large-scale businesses
+                      Powerful tools and dedicated support for large-scale
+                      businesses
                     </p>
                   </Link>
                 </NavigationMenuLink>
               </li>
               {enterpriseLinks.slice(1).map((link) => (
-                <ListItem
-                  key={link.title}
-                  title={link.title}
-                  href={link.href}
-                >
+                <ListItem key={link.title} title={link.title} href={link.href}>
                   {link.description}
                 </ListItem>
               ))}
@@ -217,15 +216,9 @@ export function Navigation() {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-
-
-
         <NavigationMenuItem>
           <NavigationMenuTrigger>Why us?</NavigationMenuTrigger>
-      
         </NavigationMenuItem>
-
-   
       </NavigationMenuList>
     </NavigationMenu>
   )
