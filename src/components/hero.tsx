@@ -5,8 +5,6 @@ import MaxWidthWrapper from "./max-with-wrapper"
 import { Button } from "./ui/button"
 import Link from "next/link"
 
-import SendRequestModal from "./cta"
-
 export default function Hero() {
   return (
     <>
