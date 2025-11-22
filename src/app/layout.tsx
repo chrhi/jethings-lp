@@ -1,12 +1,21 @@
 import type { Metadata } from "next"
-import { Poppins, Caveat } from "next/font/google"
+import { Poppins, Caveat, Cairo } from "next/font/google"
 import "./globals.css"
 import { SiteHeader } from "@/components/layout/side-header"
+import { NextIntlClientProvider } from "next-intl"
+import { getMessages, getLocale } from "next-intl/server"
 
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
+})
+
+const cairo = Cairo({
+  variable: "--font-cairo",
+  subsets: ["arabic", "latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
 })
 
 const caveat = Caveat({
@@ -47,18 +56,29 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
+  const locale = await getLocale()
+  const messages = await getMessages()
+  const isRTL = locale === "ar"
+
+  // Final computed font class
+  const fontClass = isRTL
+    ? `${cairo.variable} font-cairo`
+    : `${poppins.variable} font-poppins`
+
   return (
-    <html lang="en">
+    <html lang={locale} dir={isRTL ? "rtl" : "ltr"}>
       <body
-        className={`${poppins.variable} ${caveat.variable} antialiased light overflow-x-hidden`}
+        className={`${fontClass} ${caveat.variable} antialiased overflow-x-hidden`}
       >
-        <SiteHeader />
-        {children}
+        <NextIntlClientProvider messages={messages} locale={locale}>
+          <SiteHeader />
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   )
