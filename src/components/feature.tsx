@@ -7,52 +7,14 @@ import MaxWidthWrapper from "./max-with-wrapper"
 export const Features = () => {
   const features = [
     {
-      name: "Web Development",
+      name: "J store",
       image: "/app-screenshots/pos-openning.png",
-      description:
-        "Modern, responsive web applications built with React, Next.js, and TypeScript. Scalable solutions that grow with your business.",
+      description: "manage your retial shose store ",
     },
     {
-      name: "Mobile App Development",
+      name: "J optics",
       image: "/app-screenshots/pos-order-management.png",
-      description:
-        "Native iOS and Android apps, plus cross-platform solutions. Delivering seamless mobile experiences that engage your users.",
-    },
-    {
-      name: "Full-Stack Solutions",
-      image: "/app-screenshots/pos-shifts.png",
-      description:
-        "End-to-end development from frontend to backend. Complete systems with APIs, databases, and cloud infrastructure.",
-    },
-    {
-      name: "Custom Software",
-      image: "/app-screenshots/sync-order.png",
-      description:
-        "Tailored software solutions designed specifically for your business needs. Built to solve your unique challenges.",
-    },
-    {
-      name: "API Development",
-      image: "/app-screenshots/purchase-invoice.png",
-      description:
-        "RESTful and GraphQL APIs with seamless integrations. Connect your systems and enable powerful workflows.",
-    },
-    {
-      name: "UI/UX Design",
-      image: "/app-screenshots/purchase-confirm.png",
-      description:
-        "Beautiful, intuitive interfaces that users love. User-centered design that drives engagement and conversions.",
-    },
-    {
-      name: "Cloud & DevOps",
-      image: "/app-screenshots/supplier-table.png",
-      description:
-        "Scalable cloud infrastructure and automated deployments. Reliable hosting and continuous integration pipelines.",
-    },
-    {
-      name: "Maintenance & Support",
-      image: "/app-screenshots/chose-fromold-new.png",
-      description:
-        "Ongoing support and maintenance to keep your systems running smoothly. Long-term partnerships for sustained success.",
+      description: "All in one solution for managing your store and retails",
     },
   ]
 
@@ -80,7 +42,7 @@ export const Features = () => {
         {/* Header */}
         <div className="max-w-full mr-auto text-start space-y-6 mb-20">
           <h2 className="text-4xl md:text-6xl font-caveat font-bold text-gray-900 leading-tight">
-            Complete Development
+            Explore our
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#45ACAB] to-[#00eae6]">
               Solutions
             </span>
