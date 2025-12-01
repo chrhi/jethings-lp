@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/form"
 
 import toast from "react-hot-toast"
+import { useTranslations } from "next-intl"
 
 import {
   Dialog,
@@ -37,14 +38,9 @@ import {
   DrawerTitle,
 } from "@/components/ui/drawer"
 
-const formSchema = z.object({
-  fullName: z.string().min(2, "Name is required"),
-  phone: z.string().min(8, "Invalid phone number"),
-  email: z.string().email("Invalid email address"),
-  description: z.string().min(10, "Please describe your project"),
-})
-
 export default function SendRequestModal() {
+  const t = useTranslations("cta")
+  const tValidation = useTranslations("cta.validation")
   const [open, setOpen] = React.useState(false)
   const [isDesktop, setIsDesktop] = React.useState(false)
 
@@ -58,6 +54,13 @@ export default function SendRequestModal() {
     window.addEventListener("resize", checkScreen)
     return () => window.removeEventListener("resize", checkScreen)
   }, [])
+
+  const formSchema = z.object({
+    fullName: z.string().min(2, tValidation("nameRequired")),
+    phone: z.string().min(8, tValidation("phoneInvalid")),
+    email: z.string().email(tValidation("emailInvalid")),
+    description: z.string().min(10, tValidation("descriptionRequired")),
+  })
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -82,10 +85,10 @@ export default function SendRequestModal() {
       })
 
       if (!res.ok) {
-        throw new Error("Failed to send email")
+        throw new Error(t("form.error"))
       }
-      toast.success("Your request has been sent successfully")
-      setSuccess("✅ Your request has been sent successfully")
+      toast.success(t("form.success"))
+      setSuccess(`✅ ${t("form.success")}`)
       form.reset()
       setOpen(false) // close modal/drawer
 
@@ -98,7 +101,7 @@ export default function SendRequestModal() {
         })
       }
     } catch (err: any) {
-      setError(err.message || "An unexpected error occurred")
+      setError(err.message || t("form.error"))
     } finally {
       setLoading(false)
     }
@@ -114,9 +117,9 @@ export default function SendRequestModal() {
             name="fullName"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Full Name</FormLabel>
+                <FormLabel>{t("form.fullName")}</FormLabel>
                 <FormControl>
-                  <Input placeholder="Enter your full name" {...field} />
+                  <Input placeholder={t("form.fullNamePlaceholder")} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -129,9 +132,9 @@ export default function SendRequestModal() {
             name="phone"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Phone Number</FormLabel>
+                <FormLabel>{t("form.phone")}</FormLabel>
                 <FormControl>
-                  <Input placeholder="Example: +1 234 567 8900" {...field} />
+                  <Input placeholder={t("form.phonePlaceholder")} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -144,9 +147,9 @@ export default function SendRequestModal() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email Address</FormLabel>
+                <FormLabel>{t("form.email")}</FormLabel>
                 <FormControl>
-                  <Input placeholder="your@email.com" {...field} />
+                  <Input placeholder={t("form.emailPlaceholder")} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -159,10 +162,10 @@ export default function SendRequestModal() {
             name="description"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Project Description</FormLabel>
+                <FormLabel>{t("form.description")}</FormLabel>
                 <FormControl>
                   <Textarea
-                    placeholder="Briefly describe your project or request"
+                    placeholder={t("form.descriptionPlaceholder")}
                     className="min-h-[120px]"
                     {...field}
                   />
@@ -174,7 +177,7 @@ export default function SendRequestModal() {
 
           {/* Submit */}
           <Button type="submit" className="w-full" disabled={loading}>
-            {loading ? "Sending..." : "Send Request"}
+            {loading ? t("form.sending") : t("form.sendRequest")}
           </Button>
 
           {success && <p className="text-green-600">{success}</p>}
@@ -190,17 +193,16 @@ export default function SendRequestModal() {
         onClick={() => setOpen(true)}
         className="button-33 cursor-pointer font-medium rounded-md transition text-lg sm:text-lg md:text-xl !px-8 sm:!px-10 md:!px-12 !py-[0.9rem] sm:!py-4"
       >
-        Get Started
+        {t("button")}
       </button>
 
       {isDesktop ? (
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogContent className="sm:max-w-[600px]">
             <DialogHeader>
-              <DialogTitle>Send a Request</DialogTitle>
+              <DialogTitle>{t("title")}</DialogTitle>
               <DialogDescription>
-                Fill out the form below and we'll get back to you as soon as
-                possible.
+                {t("description")}
               </DialogDescription>
             </DialogHeader>
             {FormContent}
@@ -210,16 +212,15 @@ export default function SendRequestModal() {
         <Drawer open={open} onOpenChange={setOpen}>
           <DrawerContent>
             <DrawerHeader>
-              <DrawerTitle>Send a Request</DrawerTitle>
+              <DrawerTitle>{t("title")}</DrawerTitle>
               <DrawerDescription>
-                Fill out the form below and we'll get back to you as soon as
-                possible.
+                {t("description")}
               </DrawerDescription>
             </DrawerHeader>
             {FormContent}
             <DrawerFooter className="pt-2">
               <DrawerClose asChild>
-                <Button variant="outline">Cancel</Button>
+                <Button variant="outline">{t("form.cancel")}</Button>
               </DrawerClose>
             </DrawerFooter>
           </DrawerContent>

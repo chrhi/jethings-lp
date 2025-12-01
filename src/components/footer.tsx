@@ -1,17 +1,22 @@
+"use client"
+
 import { Linkedin, Mail, Phone, MapPin } from "lucide-react"
+import { useTranslations } from "next-intl"
 import MaxWidthWrapper from "./max-with-wrapper"
 
 export default function Footer() {
+  const t = useTranslations("footer")
+
   const features = [
-    "Web Development",
-    "Mobile Apps",
-    "Custom Software",
-    "Cloud Solutions",
+    "J Store",
+    "J Optics",
+    "Inventory Management",
+    "Sales Analytics",
   ]
 
   const legalLinks = [
-    { href: "/terms", label: "Terms of Service" },
-    { href: "/privacy", label: "Privacy Policy" },
+    { href: "/terms", label: t("termsOfService") },
+    { href: "/privacy", label: t("privacyPolicy") },
   ]
 
   const socialLinks = [
@@ -37,17 +42,14 @@ export default function Footer() {
                 <h3 className="text-xl font-bold text-black">Jethings</h3>
               </div>
               <p className="leading-relaxed text-gray-600 mb-4 text-sm">
-                Jethings is a development agency specializing in web
-                development, mobile apps, full-stack solutions, and custom
-                software development. We deliver high-quality solutions that
-                drive business results.
+                {t("description")}
               </p>
             </div>
 
-            {/* Services */}
+            {/* Products */}
             <div className="lg:col-span-3">
               <h4 className="text-sm font-semibold mb-4 text-black">
-                Services
+                {t("products")}
               </h4>
               <ul className="space-y-2">
                 {features.map((feature, index) => (
@@ -66,7 +68,7 @@ export default function Footer() {
 
             {/* Legal */}
             <div className="lg:col-span-2">
-              <h4 className="text-sm font-semibold mb-4 text-black">Legal</h4>
+              <h4 className="text-sm font-semibold mb-4 text-black">{t("legal")}</h4>
               <ul className="space-y-2">
                 {legalLinks.map((link, index) => (
                   <li key={index}>
@@ -84,7 +86,7 @@ export default function Footer() {
 
             {/* Contact */}
             <div className="lg:col-span-3">
-              <h4 className="text-sm font-semibold mb-4 text-black">Contact</h4>
+              <h4 className="text-sm font-semibold mb-4 text-black">{t("contact")}</h4>
               <div className="space-y-3">
                 <a
                   href="mailto:support@jethings.com"
@@ -102,14 +104,14 @@ export default function Footer() {
                 </a>
                 <div className="flex items-start gap-2 text-sm text-gray-600">
                   <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-gray-400" />
-                  <span>Algiers Center, Algeria</span>
+                  <span>{t("location")}</span>
                 </div>
               </div>
 
               {/* Social Links */}
               <div className="mt-5">
                 <p className="text-xs font-medium text-gray-900 mb-2">
-                  Follow us
+                  {t("followUs")}
                 </p>
                 <div className="flex gap-2">
                   {socialLinks.map((social, index) => {

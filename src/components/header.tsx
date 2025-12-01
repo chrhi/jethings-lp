@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import MaxWidthWrapper from "./max-with-wrapper";
 import { Button } from "./ui/button";
 
@@ -46,7 +47,9 @@ export default function Header() {
             height={40}
             className="flex-shrink-0"
           />
-          <Button>Get Started</Button>
+          <Link href="#services">
+            <Button>Explore Products</Button>
+          </Link>
         </div>
 
         {/* Mobile layout - centered logo only */}

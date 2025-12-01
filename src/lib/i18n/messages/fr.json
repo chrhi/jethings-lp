@@ -1,0 +1,258 @@
+{
+  "header": {
+    "brand": "Jethings",
+    "navigation": {
+      "home": "Accueil",
+      "services": "Services",
+      "approach": "Approche",
+      "capabilities": "Capacités",
+      "about": "À propos",
+      "contact": "Contact",
+      "work": "Travaux"
+    },
+    "menu": {
+      "toggle": "Basculer le menu",
+      "navigation": "Navigation",
+      "socialMedia": "Réseaux sociaux"
+    },
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "visitPlatform": "Visiter {{platform}}"
+    },
+    "language": {
+      "switch": "Changer de langue",
+      "title": "Langue",
+      "english": "English",
+      "french": "Français",
+      "arabic": "العربية"
+    },
+    "getStarted": "Commencer"
+  },
+  "hero": {
+    "headline": "Logiciel de vente au détail conçu pour",
+    "headlineHighlight": "votre magasin.",
+    "subheadline": "Gérez les stocks, suivez les ventes,",
+    "subheadlineHighlight": "développez votre entreprise.",
+    "exploreProducts": "Découvrir les produits",
+    "bookDemo": "Réserver une démo"
+  },
+  "features": {
+    "sectionLabel": "Nos produits",
+    "title": "Conçu pour la réussite du commerce de détail",
+    "description": "Solutions logicielles spécialisées conçues pour rationaliser les opérations de votre magasin",
+    "jStore": {
+      "name": "J Store",
+      "description": "Solution complète de gestion de vente au détail pour",
+      "highlight": "magasins de chaussures",
+      "comingSoon": "Bientôt disponible",
+      "notifyMe": "Me notifier",
+      "explore": "Explorer"
+    },
+    "jOptics": {
+      "name": "J Optics",
+      "description": "Solution tout-en-un pour gérer votre",
+      "highlight": "magasin d'optique",
+      "explore": "Explorer"
+    }
+  },
+  "capabilities": {
+    "headline": "Tout ce dont vous avez besoin pour gérer",
+    "headlineHighlight": "votre magasin de détail.",
+    "description1": "Logiciel prêt à l'emploi conçu pour les magasins de chaussures et d'optique.",
+    "description2": "Démarrez en quelques minutes — aucun développement personnalisé nécessaire.",
+    "paragraph1": "Nos solutions logicielles de vente au détail sont conçues spécifiquement pour les magasins de chaussures et d'optique. Nous comprenons les défis uniques de la gestion de détail et avons créé des outils qui facilitent, rendent plus efficace et plus rentable la gestion de votre magasin.",
+    "paragraph2": "Du suivi des stocks aux analyses de ventes, de la gestion des clients aux rapports — tout ce dont vous avez besoin est inclus. Pas de configuration complexe, pas d'implémentation longue. Juste un logiciel puissant qui fonctionne dès le premier jour.",
+    "inventoryManagement": {
+      "title": "Gestion des stocks",
+      "description": "Suivez les niveaux de stock, gérez les fournisseurs et ne manquez jamais de produits"
+    },
+    "salesAnalytics": {
+      "title": "Analyses de ventes",
+      "description": "Informations en temps réel sur vos performances de vente et les tendances clients"
+    },
+    "customerManagement": {
+      "title": "Gestion de la clientèle",
+      "description": "Établissez des relations durables avec des dossiers clients complets et un historique"
+    }
+  },
+  "about": {
+    "headline": "Conçu par des détaillants,",
+    "headlineHighlight": "pour les détaillants.",
+    "paragraph1": "Nous avons créé J Store et J Optics parce que nous comprenons le commerce de détail. Ce ne sont pas des solutions génériques — ce sont des logiciels conçus spécifiquement pour les magasins de chaussures et d'optique. Chaque fonctionnalité est conçue en pensant à vos opérations quotidiennes.",
+    "paragraph2": "Que vous gériez les stocks d'un magasin de chaussures ou que vous traitiez les ordonnances dans un magasin d'optique, notre logiciel s'adapte à votre flux de travail. Simple à utiliser, assez puissant pour évoluer, et toujours amélioré sur la base des commentaires réels des détaillants.",
+    "easySetup": {
+      "title": "Configuration facile",
+      "description": "Démarrez en quelques minutes, pas en quelques mois"
+    },
+    "support24_7": {
+      "title": "24/7",
+      "description": "Support disponible"
+    },
+    "retailFocused": {
+      "title": "Axé sur le détail",
+      "description": "Conçu pour votre industrie"
+    }
+  },
+  "contact": {
+    "headline": "Prêt à transformer votre",
+    "headlineHighlight": "entreprise ?",
+    "description": "Prêt à rationaliser les opérations de votre magasin ? Découvrez J Store pour les magasins de chaussures ou J Optics pour les magasins d'optique. Contactez-nous dès aujourd'hui pour voir comment notre logiciel de vente au détail peut transformer votre entreprise.",
+    "bookDemo": "Réserver une démo"
+  },
+  "cta": {
+    "button": "Commencer",
+    "title": "Envoyer une demande",
+    "description": "Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.",
+    "form": {
+      "fullName": "Nom complet",
+      "fullNamePlaceholder": "Entrez votre nom complet",
+      "phone": "Numéro de téléphone",
+      "phonePlaceholder": "Exemple : +33 1 23 45 67 89",
+      "email": "Adresse e-mail",
+      "emailPlaceholder": "votre@email.com",
+      "description": "Description du projet",
+      "descriptionPlaceholder": "Décrivez brièvement votre projet ou votre demande",
+      "sending": "Envoi en cours...",
+      "sendRequest": "Envoyer la demande",
+      "cancel": "Annuler",
+      "success": "Votre demande a été envoyée avec succès",
+      "error": "Une erreur inattendue s'est produite"
+    },
+    "validation": {
+      "nameRequired": "Le nom est requis",
+      "phoneInvalid": "Numéro de téléphone invalide",
+      "emailInvalid": "Adresse e-mail invalide",
+      "descriptionRequired": "Veuillez décrire votre projet"
+    }
+  },
+  "footer": {
+    "description": "Jethings est une entreprise de logiciels de vente au détail fournissant des solutions spécialisées pour les magasins de chaussures et d'optique. Nos produits aident les détaillants à gérer les stocks, suivre les ventes et développer leur entreprise en toute simplicité.",
+    "products": "Produits",
+    "legal": "Légal",
+    "termsOfService": "Conditions d'utilisation",
+    "privacyPolicy": "Politique de confidentialité",
+    "contact": "Contact",
+    "followUs": "Suivez-nous",
+    "location": "Centre d'Alger, Algérie"
+  },
+  "jOptics": {
+    "headline": "Solution tout-en-un pour gérer votre",
+    "headlineHighlight": "magasin d'optique",
+    "subheadline": "Gérez les ordonnances, suivez les stocks, planifiez les rendez-vous et développez votre entreprise d'optique en toute simplicité.",
+    "bookDemo": "Réserver une démo",
+    "getStarted": "Commencer",
+    "exploreFeatures": "Explorer les fonctionnalités",
+    "featuresSectionTitle": "Tout ce dont vous avez besoin pour gérer votre magasin d'optique",
+    "featuresSectionDescription": "Fonctionnalités puissantes conçues spécifiquement pour les détaillants d'optique",
+    "benefitsSectionTitle": "Conçu spécifiquement pour les magasins d'optique",
+    "benefitsSectionDescription": "J Optics comprend les défis uniques de la gestion des ordonnances, des montures et des relations clients. Concentrez-vous sur ce qui compte le plus — vos clients.",
+    "ctaSectionTitle": "Prêt à transformer votre magasin d'optique ?",
+    "ctaSectionDescription": "Découvrez comment J Optics peut rationaliser vos opérations et vous aider à mieux servir vos clients. Réservez une démo aujourd'hui.",
+    "viewAllProducts": "Voir tous les produits",
+    "features": {
+      "pointOfSale": {
+        "title": "Point de vente",
+        "description": "Système de caisse rapide et intuitif conçu pour les magasins d'optique avec gestion des ordonnances"
+      },
+      "prescriptionManagement": {
+        "title": "Gestion des ordonnances",
+        "description": "Suivez les ordonnances, gérez les commandes de lentilles et traitez les ajustements de montures en toute transparence"
+      },
+      "frameCatalog": {
+        "title": "Catalogue de montures",
+        "description": "Gestion complète des stocks pour les montures, lentilles et accessoires"
+      },
+      "appointmentScheduling": {
+        "title": "Planification des rendez-vous",
+        "description": "Gérez les rendez-vous des patients, les examens de la vue et les visites de suivi"
+      },
+      "customerRecords": {
+        "title": "Dossiers clients",
+        "description": "Maintenez un historique détaillé des clients incluant les ordonnances, les achats et les préférences"
+      },
+      "salesAnalytics": {
+        "title": "Analyses de ventes",
+        "description": "Informations en temps réel sur les performances de vente, les produits populaires et les tendances clients"
+      }
+    },
+    "benefits": {
+      "title": "Pourquoi choisir J Optics ?",
+      "items": [
+        "Flux de travail d'ordonnance rationalisé",
+        "Inventaire intégré de montures et lentilles",
+        "Suivi de l'historique et des préférences clients",
+        "Rappels de rendez-vous automatisés",
+        "Rapports de vente complets",
+        "Support multi-emplacements"
+      ]
+    },
+    "screenshots": {
+      "title": "Voir J Optics en action",
+      "dashboard": "Vue d'ensemble du tableau de bord",
+      "prescriptions": "Gestion des ordonnances",
+      "inventory": "Inventaire des montures et lentilles"
+    }
+  },
+  "jStore": {
+    "headline": "Solution complète de gestion de vente au détail pour",
+    "headlineHighlight": "magasins de chaussures",
+    "subheadline": "Gérez les stocks, suivez les ventes, gérez les clients et développez votre entreprise de magasin de chaussures efficacement.",
+    "bookDemo": "Réserver une démo",
+    "getStarted": "Commencer",
+    "viewScreenshots": "Voir les captures d'écran",
+    "productPreview": "Aperçu du produit",
+    "screenshotsTitle": "Voir J Store en action",
+    "screenshotsDescription": "Outils puissants conçus pour simplifier la gestion de votre magasin de chaussures",
+    "featuresSectionTitle": "Tout ce dont vous avez besoin pour gérer votre magasin de chaussures",
+    "featuresSectionDescription": "Fonctionnalités puissantes conçues spécifiquement pour les détaillants de chaussures",
+    "benefitsSectionTitle": "Conçu spécifiquement pour les magasins de chaussures",
+    "benefitsSectionDescription": "J Store comprend les défis uniques de la gestion des stocks de chaussures, des tailles et des relations clients. Concentrez-vous sur ce qui compte le plus — vos clients.",
+    "ctaSectionTitle": "Prêt à transformer votre magasin de chaussures ?",
+    "ctaSectionDescription": "Découvrez comment J Store peut rationaliser vos opérations et vous aider à mieux servir vos clients. Réservez une démo aujourd'hui.",
+    "viewAllProducts": "Voir tous les produits",
+    "features": {
+      "pointOfSale": {
+        "title": "Point de vente",
+        "description": "Système de caisse rapide et intuitif conçu pour les magasins de chaussures avec recherche rapide de produits"
+      },
+      "inventoryManagement": {
+        "title": "Gestion des stocks",
+        "description": "Suivez les tailles, styles, marques et niveaux de stock de chaussures en temps réel"
+      },
+      "customerManagement": {
+        "title": "Gestion de la clientèle",
+        "description": "Maintenez les profils clients, l'historique d'achat et les préférences pour un service personnalisé"
+      },
+      "salesAnalytics": {
+        "title": "Analyses de ventes",
+        "description": "Informations en temps réel sur les performances de vente, les produits populaires et les tendances clients"
+      },
+      "reporting": {
+        "title": "Rapports et analyses",
+        "description": "Rapports complets sur les ventes, la rotation des stocks et la rentabilité"
+      },
+      "paymentProcessing": {
+        "title": "Traitement des paiements",
+        "description": "Acceptez plusieurs méthodes de paiement avec un traitement de transaction sécurisé"
+      }
+    },
+    "benefits": {
+      "title": "Pourquoi choisir J Store ?",
+      "items": [
+        "Suivi des stocks de chaussures rationalisé",
+        "Gestion facile des tailles et styles",
+        "Suivi de l'historique d'achat des clients",
+        "Surveillance en temps réel des niveaux de stock",
+        "Rapports de vente complets",
+        "Support multi-emplacements"
+      ]
+    },
+    "screenshots": {
+      "title": "Voir J Store en action",
+      "dashboard": "Vue d'ensemble du tableau de bord",
+      "inventory": "Gestion des stocks",
+      "sales": "Ventes et analyses"
+    }
+  }
+}

@@ -3,6 +3,11 @@
     "brand": "Jethings",
     "navigation": {
       "home": "Home",
+      "services": "Services",
+      "approach": "Approach",
+      "capabilities": "Capabilities",
+      "about": "About",
+      "contact": "Contact",
       "work": "Work"
     },
     "menu": {
@@ -17,45 +22,237 @@
     },
     "language": {
       "switch": "Switch language",
-      "title": "Language"
+      "title": "Language",
+      "english": "English",
+      "french": "Français",
+      "arabic": "العربية"
+    },
+    "getStarted": "Get Started"
+  },
+  "hero": {
+    "headline": "Retail software built for",
+    "headlineHighlight": "your store.",
+    "subheadline": "Manage inventory, track sales,",
+    "subheadlineHighlight": "grow your business.",
+    "exploreProducts": "Explore Products",
+    "bookDemo": "Book a Demo"
+  },
+  "features": {
+    "sectionLabel": "Our Products",
+    "title": "Built for retail success",
+    "description": "Specialized software solutions designed to streamline your store operations",
+    "jStore": {
+      "name": "J Store",
+      "description": "Complete retail management solution for",
+      "highlight": "shoe stores",
+      "comingSoon": "Coming Soon",
+      "notifyMe": "Notify me",
+      "explore": "Explore"
+    },
+    "jOptics": {
+      "name": "J Optics",
+      "description": "All-in-one solution for managing your",
+      "highlight": "optical store",
+      "explore": "Explore"
     }
   },
-  "home": {
-    "hero": {
-      "name": "Jethings",
-      "title": "Development Agency",
-      "subtitle": "Building high-quality web applications and software solutions",
-      "availability": "Available for freelance work or full-time remote positions.",
-      "avatarAlt": "Jethings"
+  "capabilities": {
+    "headline": "Everything you need to run",
+    "headlineHighlight": "your retail store.",
+    "description1": "Ready-made software designed for shoe and optical stores.",
+    "description2": "Get started in minutes — no custom development needed.",
+    "paragraph1": "Our retail software solutions are built specifically for shoe stores and optical stores. We understand the unique challenges of retail management and have created tools that make running your store easier, more efficient, and more profitable.",
+    "paragraph2": "From inventory tracking to sales analytics, customer management to reporting — everything you need is included. No complex setup, no lengthy implementation. Just powerful software that works from day one.",
+    "inventoryManagement": {
+      "title": "Inventory Management",
+      "description": "Track stock levels, manage suppliers, and never run out of products"
+    },
+    "salesAnalytics": {
+      "title": "Sales Analytics",
+      "description": "Real-time insights into your sales performance and customer trends"
+    },
+    "customerManagement": {
+      "title": "Customer Management",
+      "description": "Build lasting relationships with comprehensive customer records and history"
+    }
     },
     "about": {
-      "title": "About Us",
-      "description1": "We are a development agency specializing in web development, mobile apps, full-stack solutions, and custom software development. We deliver high-quality solutions that drive business results.",
-      "description2": "We focus on writing clean, maintainable code and delivering exceptional user experiences.",
-      "buttons": {
-        "projects": "View Our Work",
-        "blogs": "Read Blog"
-      }
+    "headline": "Built by retailers,",
+    "headlineHighlight": "for retailers.",
+    "paragraph1": "We've built J Store and J Optics because we understand retail. These aren't generic solutions — they're purpose-built software designed specifically for shoe stores and optical stores. Every feature is crafted with your daily operations in mind.",
+    "paragraph2": "Whether you're managing inventory for a shoe store or handling prescriptions at an optical shop, our software adapts to your workflow. Simple to use, powerful enough to scale, and always improving based on real retailer feedback.",
+    "easySetup": {
+      "title": "Easy Setup",
+      "description": "Get started in minutes, not months"
     },
-    "testimonial": {
-      "title": "Client Testimonial",
-      "quote": "Great to work with. They know what they're doing. Highly recommended.",
-      "rating": "⭐ 5.0 — Figma to Next.js conversion · October – November 2024"
+    "support24_7": {
+      "title": "24/7",
+      "description": "Support Available"
     },
-    "footer": {
-      "builtWith": "Built with",
-      "copyright": "© 2025 Jethings"
+    "retailFocused": {
+      "title": "Retail-Focused",
+      "description": "Built for your industry"
     }
   },
-  "experience": {
-    "title": "Experience",
-    "current": "Current",
-    "positionsCount": "{count} positions"
+  "contact": {
+    "headline": "Ready to transform your",
+    "headlineHighlight": "business?",
+    "description": "Ready to streamline your store operations? Explore J Store for shoe stores or J Optics for optical stores. Get in touch today to see how our retail software can transform your business.",
+    "bookDemo": "Book a Demo"
   },
-  "projects": {
-    "title": "Portfolio",
-    "desc": "A curated collection of digital solutions that combine creativity, practical functionality, and user-focused design. Each project represents a unique challenge solved through innovative web development."
+  "cta": {
+    "button": "Get Started",
+    "title": "Send a Request",
+    "description": "Fill out the form below and we'll get back to you as soon as possible.",
+    "form": {
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "Enter your full name",
+      "phone": "Phone Number",
+      "phonePlaceholder": "Example: +1 234 567 8900",
+      "email": "Email Address",
+      "emailPlaceholder": "your@email.com",
+      "description": "Project Description",
+      "descriptionPlaceholder": "Briefly describe your project or request",
+      "sending": "Sending...",
+      "sendRequest": "Send Request",
+      "cancel": "Cancel",
+      "success": "Your request has been sent successfully",
+      "error": "An unexpected error occurred"
+    },
+    "validation": {
+      "nameRequired": "Name is required",
+      "phoneInvalid": "Invalid phone number",
+      "emailInvalid": "Invalid email address",
+      "descriptionRequired": "Please describe your project"
+    }
+  },
+  "footer": {
+    "description": "Jethings is a retail software company providing specialized solutions for shoe stores and optical stores. Our products help retailers manage inventory, track sales, and grow their business with ease.",
+    "products": "Products",
+    "legal": "Legal",
+    "termsOfService": "Terms of Service",
+    "privacyPolicy": "Privacy Policy",
+    "contact": "Contact",
+    "followUs": "Follow us",
+    "location": "Algiers Center, Algeria"
+  },
+  "jOptics": {
+    "headline": "All-in-one solution for managing your",
+    "headlineHighlight": "optical store",
+    "subheadline": "Manage prescriptions, track inventory, schedule appointments, and grow your optical business with ease.",
+    "bookDemo": "Book a Demo",
+    "getStarted": "Get Started",
+    "exploreFeatures": "Explore Features",
+    "featuresSectionTitle": "Everything you need to run your optical store",
+    "featuresSectionDescription": "Powerful features designed specifically for optical retailers",
+    "benefitsSectionTitle": "Built specifically for optical stores",
+    "benefitsSectionDescription": "J Optics understands the unique challenges of managing prescriptions, frames, and customer relationships. Focus on what matters most — your customers.",
+    "ctaSectionTitle": "Ready to transform your optical store?",
+    "ctaSectionDescription": "See how J Optics can streamline your operations and help you serve your customers better. Book a demo today.",
+    "viewAllProducts": "View All Products",
+    "features": {
+      "pointOfSale": {
+        "title": "Point of Sale",
+        "description": "Fast and intuitive checkout system designed for optical stores with prescription management"
+      },
+      "prescriptionManagement": {
+        "title": "Prescription Management",
+        "description": "Track prescriptions, manage lens orders, and handle frame fittings seamlessly"
+      },
+      "frameCatalog": {
+        "title": "Frame Catalog",
+        "description": "Comprehensive inventory management for frames, lenses, and accessories"
+      },
+      "appointmentScheduling": {
+        "title": "Appointment Scheduling",
+        "description": "Manage patient appointments, eye exams, and follow-up visits"
+      },
+      "customerRecords": {
+        "title": "Customer Records",
+        "description": "Maintain detailed customer history including prescriptions, purchases, and preferences"
+      },
+      "salesAnalytics": {
+        "title": "Sales Analytics",
+        "description": "Real-time insights into sales performance, popular products, and customer trends"
+      }
+    },
+    "benefits": {
+      "title": "Why Choose J Optics?",
+      "items": [
+        "Streamlined prescription workflow",
+        "Integrated frame and lens inventory",
+        "Customer history and preferences tracking",
+        "Automated appointment reminders",
+        "Comprehensive sales reporting",
+        "Multi-location support"
+      ]
+    },
+    "screenshots": {
+      "title": "See J Optics in Action",
+      "dashboard": "Dashboard Overview",
+      "prescriptions": "Prescription Management",
+      "inventory": "Frame & Lens Inventory"
+    }
+  },
+  "jStore": {
+    "headline": "Complete retail management solution for",
+    "headlineHighlight": "shoe stores",
+    "subheadline": "Manage inventory, track sales, handle customers, and grow your shoe store business efficiently.",
+    "bookDemo": "Book a Demo",
+    "getStarted": "Get Started",
+    "viewScreenshots": "View Screenshots",
+    "productPreview": "Product Preview",
+    "screenshotsTitle": "See J Store in action",
+    "screenshotsDescription": "Powerful tools designed to simplify your shoe store management",
+    "featuresSectionTitle": "Everything you need to run your shoe store",
+    "featuresSectionDescription": "Powerful features designed specifically for shoe retailers",
+    "benefitsSectionTitle": "Built specifically for shoe stores",
+    "benefitsSectionDescription": "J Store understands the unique challenges of managing shoe inventory, sizes, and customer relationships. Focus on what matters most — your customers.",
+    "ctaSectionTitle": "Ready to transform your shoe store?",
+    "ctaSectionDescription": "See how J Store can streamline your operations and help you serve your customers better. Book a demo today.",
+    "viewAllProducts": "View All Products",
+    "features": {
+      "pointOfSale": {
+        "title": "Point of Sale",
+        "description": "Fast and intuitive checkout system designed for shoe stores with quick product lookup"
+      },
+      "inventoryManagement": {
+        "title": "Inventory Management",
+        "description": "Track shoe sizes, styles, brands, and stock levels in real-time"
+      },
+      "customerManagement": {
+        "title": "Customer Management",
+        "description": "Maintain customer profiles, purchase history, and preferences for personalized service"
+      },
+      "salesAnalytics": {
+        "title": "Sales Analytics",
+        "description": "Real-time insights into sales performance, popular products, and customer trends"
+      },
+      "reporting": {
+        "title": "Reporting & Insights",
+        "description": "Comprehensive reports on sales, inventory turnover, and profitability"
+      },
+      "paymentProcessing": {
+        "title": "Payment Processing",
+        "description": "Accept multiple payment methods with secure transaction processing"
+      }
+    },
+    "benefits": {
+      "title": "Why Choose J Store?",
+      "items": [
+        "Streamlined shoe inventory tracking",
+        "Size and style management made easy",
+        "Customer purchase history tracking",
+        "Real-time stock level monitoring",
+        "Comprehensive sales reporting",
+        "Multi-location support"
+      ]
+    },
+    "screenshots": {
+      "title": "See J Store in Action",
+      "dashboard": "Dashboard Overview",
+      "inventory": "Inventory Management",
+      "sales": "Sales & Analytics"
+    }
   }
 }
-
-
