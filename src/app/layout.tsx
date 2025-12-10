@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Poppins, Caveat, Cairo } from "next/font/google"
+import { Poppins, Caveat, Tajawal } from "next/font/google"
 import "./globals.css"
 import { SiteHeader } from "@/components/layout/side-header"
 import { NextIntlClientProvider } from "next-intl"
@@ -11,10 +11,10 @@ const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
 })
 
-const cairo = Cairo({
-  variable: "--font-cairo",
+const tajawal = Tajawal({
+  variable: "--font-tajawal",
   subsets: ["arabic", "latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["300", "400", "500", "700", "800", "900"],
   display: "swap",
 })
 
@@ -67,7 +67,7 @@ export default async function RootLayout({
 
   // Final computed font class
   const fontClass = isRTL
-    ? `${cairo.variable} font-cairo`
+    ? `${tajawal.variable} font-tajawal`
     : `${poppins.variable} font-poppins`
 
   return (

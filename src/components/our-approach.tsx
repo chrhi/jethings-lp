@@ -77,9 +77,9 @@ export default function OurApproach() {
             {approaches.map((approach, index) => (
               <div
                 key={approach.id}
-                className="group text-left p-6 rounded-xl transition-all duration-300 hover:shadow-xl bg-white border border-gray-200 hover:border-[#45ACAB] relative"
+                className="group text-left p-6 rounded-xl transition-all duration-300 hover:shadow-xl bg-white border border-gray-200 hover:border-blue-600 relative"
               >
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg mb-4  mr-2 transition-colors bg-gray-100 text-gray-600 group-hover:bg-[#45ACAB] group-hover:text-white relative">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg mb-4  mr-2 transition-colors bg-gray-100 text-gray-600 group-hover:bg-blue-600 group-hover:text-white relative">
                   <span className="text-xl font-bold relative z-10">
                     {approach.number}
                   </span>

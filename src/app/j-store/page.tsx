@@ -10,7 +10,7 @@ import { Check, ArrowRight, Package, TrendingUp, Users, ShoppingCart, BarChart3,
 
 export default function JStorePage() {
   const t = useTranslations("jStore")
-  const primaryColor = "#45ACAB"
+  const primaryColor = "#2563eb"
   
   const features = [
     {

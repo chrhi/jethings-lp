@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useMemo } from "react"
+import { useState, useMemo, useEffect } from "react"
 import { useTranslations, useLocale } from "next-intl"
 import MaxWidthWrapper from "../max-with-wrapper"
 import { MobileNavigation } from "./navigations/mobil-navigation"
@@ -13,30 +13,13 @@ export const SiteHeader = () => {
   const locale = useLocale()
   const isRTL = locale === "ar"
   const [isScrolled, setIsScrolled] = useState(false)
-  const [activeSection, setActiveSection] = useState("home")
-
-  // Static navigation IDs
-  const navIds = ["home", "services", "approach", "capabilities", "about", "contact"]
 
   // Navigation items with translations
   const navItems = useMemo(
     () => [
-      { id: "home", label: t("navigation.home") },
-      { id: "services", label: t("navigation.services") },
-      { id: "approach", label: t("navigation.approach") },
-      { id: "capabilities", label: t("navigation.capabilities") },
-      { id: "about", label: t("navigation.about") },
-      { id: "contact", label: t("navigation.contact") },
-    ],
-    [t]
-  )
-
-  // Language options for the switcher
-  const languageItems = useMemo(
-    () => [
-      { value: "en", label: t("language.english") },
-      { value: "fr", label: t("language.french") },
-      { value: "ar", label: t("language.arabic") },
+      { id: "home", label: t("navigation.home"), href: "/" },
+      { id: "pricing", label: t("navigation.pricing"), href: "/pricing" },
+      { id: "about", label: t("navigation.about"), href: "/about" },
     ],
     [t]
   )
@@ -44,115 +27,74 @@ export const SiteHeader = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0)
-
-      // Update active section based on scroll position
-      const sections = navIds
-        .map((id) => {
-          const element = document.getElementById(id)
-          if (element) {
-            const rect = element.getBoundingClientRect()
-            return {
-              id,
-              top: rect.top,
-              bottom: rect.bottom,
-            }
-          }
-          return null
-        })
-        .filter(Boolean)
-
-      const currentSection = sections.find((section) => {
-        if (!section) return false
-        return section.top <= 100 && section.bottom >= 100
-      })
-
-      if (currentSection) {
-        setActiveSection(currentSection.id)
-      }
     }
 
     window.addEventListener("scroll", handleScroll)
-    handleScroll() // Initial check
+    handleScroll()
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [navIds])
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      const headerHeight = 70
-      const elementPosition = element.getBoundingClientRect().top
-      const offsetPosition = elementPosition + window.pageYOffset - headerHeight
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      })
-    }
-  }
+  }, [])
 
   return (
     <header
       className={`w-full fixed top-0 z-50 bg-transparent overflow-visible transition-all duration-300 ${
-        isScrolled ? "py-2 sm:py-3" : "py-0"
+        isScrolled
+          ? "py-0 border-b bg-white backdrop-blur-sm  shadow-sm"
+          : "py-0"
       }`}
       dir={isRTL ? "rtl" : "ltr"}
     >
       <MaxWidthWrapper
         className={`flex items-center justify-between h-[60px] sm:h-[70px] relative overflow-visible gap-2 sm:gap-4 md:gap-6 lg:gap-8 px-3 sm:px-4 ${
-          isScrolled 
-            ? "border bg-white/95 backdrop-blur-sm rounded-xl shadow-sm mx-2 sm:mx-4 lg:mx-auto w-auto lg:w-full" 
-            : ""
+          isScrolled ? " " : ""
         }`}
       >
         {/* Logo */}
-        <button
-          onClick={() => scrollToSection("home")}
-          className={`h-full w-fit flex items-center gap-x-2 sm:gap-x-4 overflow-visible cursor-pointer hover:opacity-80 transition-opacity ${isRTL ? "flex-row-reverse" : ""}`}
+        <Link
+          href="/"
+          className={`h-full w-fit flex items-center gap-x-2 sm:gap-x-4 overflow-visible cursor-pointer hover:opacity-80 transition-opacity ${
+            isRTL ? "flex-row-reverse" : ""
+          }`}
         >
-      <Image src="/jethings/logo-written.png" alt="logo" width={100} height={100} />
-        </button>
+          <Image src="/jethings/logo-written.png" alt="logo" width={100} height={100} />
+        </Link>
 
         {/* Desktop Navigation */}
-        <nav className={`hidden lg:flex flex-1 items-center ${isRTL ? "justify-end" : "justify-start"}`}>
-          <ul className={`flex items-center gap-4 xl:gap-6 ${isRTL ? "flex-row-reverse" : ""}`}>
+        <nav
+          className="hidden lg:flex flex-1 items-center justify-center"
+        >
+          <ul className="flex items-center gap-6">
             {navItems.map((item) => (
               <li key={item.id}>
-                <button
-                  onClick={() => scrollToSection(item.id)}
-                  className={`text-sm font-medium transition-colors duration-200 hover:text-[#45ACAB] cursor-pointer whitespace-nowrap ${
-                    activeSection === item.id
-                      ? "text-[#45ACAB]"
-                      : "text-gray-600"
-                  }`}
+                <Link
+                  href={item.href}
+                  className="text-sm font-medium transition-colors duration-200 hover:text-blue-600 text-gray-700 whitespace-nowrap"
                 >
                   {item.label}
-                </button>
+                </Link>
               </li>
             ))}
           </ul>
         </nav>
 
         {/* CTA Button and Language Switcher - Desktop */}
-        <div className={`hidden lg:flex items-center gap-x-4 h-full ${isRTL ? "flex-row-reverse" : ""}`}>
-          <CustomLocaleSwitcher
-            defaultValue={locale}
-            items={languageItems}
-            label={t("language.switch")}
-            variant="default"
-          />
+        <div
+          className={`hidden lg:flex items-center gap-x-4 h-full ${
+            isRTL ? "flex-row-reverse" : ""
+          }`}
+        >
           <Link href={"https://cal.com/craftednext/30min"} target="_blank">
             <button
-              className="button-33 cursor-pointer text-sm lg:text-base px-4 lg:px-6 py-2 sm:py-2.5"
+              className="bg-blue-600 hover:bg-blue-700 text-white rounded-full cursor-pointer text-sm lg:text-base px-4 lg:px-6 py-2 sm:py-3 transition-colors"
               role="button"
             >
-              <span className="text whitespace-nowrap">{t("getStarted")}</span>
+              <span className="whitespace-nowrap">{t("getStarted")}</span>
             </button>
           </Link>
         </div>
 
         {/* Mobile Menu */}
         <div className="lg:hidden flex items-center">
-          <MobileNavigation scrollToSection={scrollToSection} />
+          <MobileNavigation />
         </div>
       </MaxWidthWrapper>
     </header>

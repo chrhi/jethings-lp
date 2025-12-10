@@ -3,12 +3,8 @@
     "brand": "Jethings",
     "navigation": {
       "home": "Accueil",
-      "services": "Services",
-      "approach": "Approche",
-      "capabilities": "Capacités",
-      "about": "À propos",
-      "contact": "Contact",
-      "work": "Travaux"
+      "pricing": "Tarifs",
+      "about": "À propos"
     },
     "menu": {
       "toggle": "Basculer le menu",
@@ -30,17 +26,54 @@
     "getStarted": "Commencer"
   },
   "hero": {
+    "badge": "Approuvé par plus de 500 entreprises",
     "headline": "Logiciel de vente au détail conçu pour",
     "headlineHighlight": "votre magasin.",
     "subheadline": "Gérez les stocks, suivez les ventes,",
     "subheadlineHighlight": "développez votre entreprise.",
+    "feature1": "Intégration facile",
+    "feature2": "Support 24/7",
+    "feature3": "Essai gratuit",
     "exploreProducts": "Découvrir les produits",
-    "bookDemo": "Réserver une démo"
+    "bookDemo": "Réserver une démo",
+    "trustedBy": "Conçu pour les magasins de détail"
   },
   "features": {
     "sectionLabel": "Nos produits",
     "title": "Conçu pour la réussite du commerce de détail",
     "description": "Solutions logicielles spécialisées conçues pour rationaliser les opérations de votre magasin",
+    "bentoFeatures": {
+      "label": "Fonctionnalités",
+      "title": "Tout ce dont vous avez besoin pour vendre plus,",
+      "titleLine2": "stresser moins",
+      "description": "Une boîte à outils moderne pour gérer votre entreprise de bout en bout : opérations, revenus et relations clients.",
+      "stockManagement": {
+        "title": "Gestion des stocks",
+        "description": "Suivez les références, variantes et ne manquez jamais de stock."
+      },
+      "invoices": {
+        "title": "Factures",
+        "description": "Créez et envoyez des factures personnalisées en quelques secondes."
+      },
+      "analytics": {
+        "title": "Analyses",
+        "description": "Surveillez les ventes, marges et tendances avec des tableaux de bord en direct."
+      },
+      "pos": {
+        "title": "Point de vente",
+        "description": "Encaissement rapide avec inventaire et paiements synchronisés."
+      },
+      "manageClients": {
+        "title": "Gérer les clients",
+        "description": "Conservez l'historique, les préférences et la fidélité des clients en un seul endroit."
+      }
+    },
+    "appsCarousel": {
+      "label": "Applications et intégrations",
+      "title": "Étendez vos possibilités avec des applications sélectionnées",
+      "description": "Un carrousel léger et tactile d'applications partenaires et d'intégrations conçu pour maintenir chaque flux de vente au détail connecté.",
+      "findOutMore": "En savoir plus"
+    },
     "jStore": {
       "name": "J Store",
       "description": "Solution complète de gestion de vente au détail pour",
@@ -98,7 +131,8 @@
     "headline": "Prêt à transformer votre",
     "headlineHighlight": "entreprise ?",
     "description": "Prêt à rationaliser les opérations de votre magasin ? Découvrez J Store pour les magasins de chaussures ou J Optics pour les magasins d'optique. Contactez-nous dès aujourd'hui pour voir comment notre logiciel de vente au détail peut transformer votre entreprise.",
-    "bookDemo": "Réserver une démo"
+    "bookDemo": "Réserver une démo",
+    "ctaDescription": "Prêt à le voir en action ? Choisissez comment vous souhaitez vous connecter."
   },
   "cta": {
     "button": "Commencer",
@@ -150,6 +184,8 @@
     "ctaSectionTitle": "Prêt à transformer votre magasin d'optique ?",
     "ctaSectionDescription": "Découvrez comment J Optics peut rationaliser vos opérations et vous aider à mieux servir vos clients. Réservez une démo aujourd'hui.",
     "viewAllProducts": "Voir tous les produits",
+    "trustedBy": "Approuvé par",
+    "opticalStores": "magasins d'optique",
     "features": {
       "pointOfSale": {
         "title": "Point de vente",

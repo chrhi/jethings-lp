@@ -16,7 +16,7 @@ export const Features = () => {
       image: "/logos/2.svg",
       description: t("jStore.description"),
       highlight: t("jStore.highlight"),
-      color: "#45ACAB",
+      color: "#2563eb",
       comingSoon: true,
     },
     {
@@ -34,7 +34,7 @@ export const Features = () => {
       <MaxWidthWrapper>
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-[#45ACAB] font-medium tracking-wide uppercase text-sm mb-3">
+          <p className="text-blue-600 font-medium tracking-wide uppercase text-sm mb-3">
             {t("sectionLabel")}
           </p>
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">

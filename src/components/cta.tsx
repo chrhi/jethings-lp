@@ -37,8 +37,13 @@ import {
   DrawerHeader,
   DrawerTitle,
 } from "@/components/ui/drawer"
+import { cn } from "@/lib/utils"
 
-export default function SendRequestModal() {
+export default function SendRequestModal({
+  buttonClassName,
+}: {
+  buttonClassName?: string
+}) {
   const t = useTranslations("cta")
   const tValidation = useTranslations("cta.validation")
   const locale = useLocale()
@@ -111,7 +116,7 @@ export default function SendRequestModal() {
 
   const FormContent = () => (
     <div
-      className={`w-full p-2 ${isRTL ? "font-cairo text-right" : ""}`}
+      className={`w-full p-2 ${isRTL ? "font-tajawal text-right" : ""}`}
       dir={isRTL ? "rtl" : "ltr"}
       lang={locale}
     >
@@ -218,7 +223,10 @@ export default function SendRequestModal() {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="button-33 cursor-pointer font-medium rounded-md transition text-lg sm:text-lg md:text-xl !px-8 sm:!px-10 md:!px-12 !py-[0.9rem] sm:!py-4"
+        className={cn(
+          "cursor-pointer font-semibold rounded-full transition text-base sm:text-lg md:text-xl px-8 sm:px-10 md:px-12 py-3 sm:py-4 bg-blue-600 text-white shadow-lg hover:shadow-xl hover:bg-blue-700 active:translate-y-[1px]",
+          buttonClassName
+        )}
       >
         {t("button")}
       </button>
@@ -242,7 +250,7 @@ export default function SendRequestModal() {
         <Drawer open={open} onOpenChange={setOpen}>
           <DrawerContent
             dir={isRTL ? "rtl" : "ltr"}
-            className={isRTL ? "font-cairo text-right" : ""}
+            className={isRTL ? "font-tajawal text-right" : ""}
           >
             <DrawerHeader className={isRTL ? "text-right" : ""}>
               <DrawerTitle>{t("title")}</DrawerTitle>

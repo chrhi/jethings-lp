@@ -3,12 +3,8 @@
     "brand": "Jethings",
     "navigation": {
       "home": "Home",
-      "services": "Services",
-      "approach": "Approach",
-      "capabilities": "Capabilities",
-      "about": "About",
-      "contact": "Contact",
-      "work": "Work"
+      "pricing": "Pricing",
+      "about": "About"
     },
     "menu": {
       "toggle": "Toggle menu",
@@ -30,17 +26,54 @@
     "getStarted": "Get Started"
   },
   "hero": {
-    "headline": "Retail software built for",
-    "headlineHighlight": "your store.",
-    "subheadline": "Manage inventory, track sales,",
-    "subheadlineHighlight": "grow your business.",
+    "badge": "Retail software solutions",
+    "headline": "Run Your Entire Business in",
+    "headlineHighlight": "One Smart System.",
+    "subheadline": "Simple enough for any team. Powerful enough to manage stock, process sales",
+    "subheadlineHighlight": "and track performance in real time.",
+    "feature1": "Easy Integration",
+    "feature2": "24/7 Support",
+    "feature3": "Free Trial",
     "exploreProducts": "Explore Products",
-    "bookDemo": "Book a Demo"
+    "bookDemo": "Book a Demo",
+    "trustedBy": "Built for retail stores"
   },
   "features": {
     "sectionLabel": "Our Products",
     "title": "Built for retail success",
     "description": "Specialized software solutions designed to streamline your store operations",
+    "bentoFeatures": {
+      "label": "Features",
+      "title": "All you need to sell more,",
+      "titleLine2": "stress less",
+      "description": "A modern toolkit to run your business end-to-end: operations, revenue, and customer relationships.",
+      "stockManagement": {
+        "title": "Stock Management",
+        "description": "Track SKUs, variants, and never run out of stock."
+      },
+      "invoices": {
+        "title": "Invoices",
+        "description": "Create and send branded invoices in seconds."
+      },
+      "analytics": {
+        "title": "Analytics",
+        "description": "Monitor sales, margins, and trends with live dashboards."
+      },
+      "pos": {
+        "title": "POS",
+        "description": "Fast checkout with synced inventory and payments."
+      },
+      "manageClients": {
+        "title": "Manage Clients",
+        "description": "Keep customer history, preferences, and loyalty in one place."
+      }
+    },
+    "appsCarousel": {
+      "label": "Apps & Integrations",
+      "title": "Extend your possibilities with curated apps",
+      "description": "A light, swipe-friendly carousel of partner apps and integrations designed to keep every retail flow connected.",
+      "findOutMore": "Find out More"
+    },
     "jStore": {
       "name": "J Store",
       "description": "Complete retail management solution for",
@@ -75,8 +108,8 @@
       "title": "Customer Management",
       "description": "Build lasting relationships with comprehensive customer records and history"
     }
-    },
-    "about": {
+  },
+  "about": {
     "headline": "Built by retailers,",
     "headlineHighlight": "for retailers.",
     "paragraph1": "We've built J Store and J Optics because we understand retail. These aren't generic solutions — they're purpose-built software designed specifically for shoe stores and optical stores. Every feature is crafted with your daily operations in mind.",
@@ -98,7 +131,8 @@
     "headline": "Ready to transform your",
     "headlineHighlight": "business?",
     "description": "Ready to streamline your store operations? Explore J Store for shoe stores or J Optics for optical stores. Get in touch today to see how our retail software can transform your business.",
-    "bookDemo": "Book a Demo"
+    "bookDemo": "Book a Demo",
+    "ctaDescription": "Ready to see it live? Choose how you want to connect."
   },
   "cta": {
     "button": "Get Started",
@@ -150,6 +184,8 @@
     "ctaSectionTitle": "Ready to transform your optical store?",
     "ctaSectionDescription": "See how J Optics can streamline your operations and help you serve your customers better. Book a demo today.",
     "viewAllProducts": "View All Products",
+    "trustedBy": "Trusted by",
+    "opticalStores": "Optical stores",
     "features": {
       "pointOfSale": {
         "title": "Point of Sale",

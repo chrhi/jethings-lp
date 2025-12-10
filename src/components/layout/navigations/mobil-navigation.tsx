@@ -15,11 +15,7 @@ import {
 } from "@/components/ui/sheet"
 import CustomLocaleSwitcher from "@/components/locale-switcher-select"
 
-interface MobileNavigationProps {
-  scrollToSection: (sectionId: string) => void
-}
-
-export function MobileNavigation({ scrollToSection }: MobileNavigationProps) {
+export function MobileNavigation() {
   const t = useTranslations("header")
   const locale = useLocale()
   const isRTL = locale === "ar"
@@ -28,12 +24,9 @@ export function MobileNavigation({ scrollToSection }: MobileNavigationProps) {
   // Navigation items with translations
   const navItems = React.useMemo(
     () => [
-      { id: "home", label: t("navigation.home") },
-      { id: "services", label: t("navigation.services") },
-      { id: "approach", label: t("navigation.approach") },
-      { id: "capabilities", label: t("navigation.capabilities") },
-      { id: "about", label: t("navigation.about") },
-      { id: "contact", label: t("navigation.contact") },
+      { id: "home", label: t("navigation.home"), href: "/" },
+      { id: "pricing", label: t("navigation.pricing"), href: "/pricing" },
+      { id: "about", label: t("navigation.about"), href: "/about" },
     ],
     [t]
   )
@@ -48,11 +41,6 @@ export function MobileNavigation({ scrollToSection }: MobileNavigationProps) {
     [t]
   )
 
-  const handleNavClick = (sectionId: string) => {
-    scrollToSection(sectionId)
-    setOpen(false)
-  }
-
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
@@ -63,32 +51,38 @@ export function MobileNavigation({ scrollToSection }: MobileNavigationProps) {
       </SheetTrigger>
       <SheetContent
         side={isRTL ? "left" : "right"}
-        className="w-[280px] sm:w-[350px] overflow-y-auto flex flex-col"
+        className="w-[300px] sm:w-[380px] overflow-y-auto flex flex-col bg-white border-l border-gray-100"
       >
-        <SheetHeader>
-          <SheetTitle className={isRTL ? "text-right" : "text-left"}>{t("brand")}</SheetTitle>
+        <SheetHeader className="pb-6 border-b border-gray-100">
+          <SheetTitle className={`text-xl font-bold text-gray-900 ${isRTL ? "text-right" : "text-left"}`}>
+            {t("brand")}
+          </SheetTitle>
         </SheetHeader>
-        <nav className="mt-6 px-2 sm:px-4 flex-1">
-          <ul className="space-y-1 sm:space-y-2">
+        
+        <nav className="mt-6 px-4 flex-1">
+          <ul className="space-y-2">
             {navItems.map((item) => (
               <li key={item.id}>
-                <button
-                  onClick={() => handleNavClick(item.id)}
-                  className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg text-sm font-medium text-gray-600 hover:text-[#45ACAB] hover:bg-gray-50 transition-colors duration-200 cursor-pointer ${isRTL ? "text-right" : "text-left"}`}
+                <Link
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className={`block w-full px-4 py-3 rounded-xl text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-600/5 hover:to-transparent transition-all duration-200 border border-transparent hover:border-blue-600/20 ${isRTL ? "text-right" : "text-left"}`}
                 >
                   {item.label}
-                </button>
+                </Link>
               </li>
             ))}
           </ul>
         </nav>
         
         {/* Language Switcher and CTA Button in Mobile Menu */}
-        <div className="mt-auto pt-4 pb-2 px-2 sm:px-4 border-t border-gray-100 space-y-4">
+        <div className="mt-auto pt-6 pb-6 px-4 border-t border-gray-200 bg-gradient-to-b from-white to-gray-50/50 space-y-4">
           {/* Language Switcher */}
-          <div className={`flex items-center gap-3 ${isRTL ? "flex-row-reverse" : ""}`}>
-            <Globe className="w-5 h-5 text-gray-500" />
-            <span className="text-sm text-gray-600 font-medium">{t("language.title")}</span>
+          <div className={`flex items-center gap-3 p-3 rounded-xl bg-gray-50/50 ${isRTL ? "flex-row-reverse" : ""}`}>
+            <div className="flex items-center gap-2">
+              <Globe className="w-5 h-5 text-blue-600" />
+              <span className="text-sm text-gray-700 font-semibold">{t("language.title")}</span>
+            </div>
             <div className="flex-1">
               <CustomLocaleSwitcher
                 defaultValue={locale}
@@ -107,10 +101,10 @@ export function MobileNavigation({ scrollToSection }: MobileNavigationProps) {
             className="block"
           >
             <button
-              className="w-full button-33 cursor-pointer text-sm sm:text-base py-3"
+              className="w-full rounded-xl bg-blue-600 text-white font-semibold text-base py-3.5 px-4 shadow-lg hover:bg-blue-700 hover:shadow-xl transition-all duration-200 active:scale-[0.98]"
               role="button"
             >
-              <span className="text">{t("getStarted")}</span>
+              {t("getStarted")}
             </button>
           </Link>
         </div>
