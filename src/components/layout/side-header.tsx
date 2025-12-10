@@ -7,7 +7,6 @@ import MaxWidthWrapper from "../max-with-wrapper"
 import { MobileNavigation } from "./navigations/mobil-navigation"
 import CustomLocaleSwitcher from "../locale-switcher-select"
 import Link from "next/link"
-import Image from "next/image"
 
 export const SiteHeader = () => {
   const t = useTranslations("header")
@@ -61,11 +60,11 @@ export const SiteHeader = () => {
         {/* Logo */}
         <Link
           href="/"
-          className={`h-full w-fit flex items-center gap-x-2 sm:gap-x-4 overflow-visible cursor-pointer hover:opacity-80 transition-opacity ${
+          className={`h-full w-fit flex items-center overflow-visible cursor-pointer hover:opacity-80 transition-opacity ${
             isRTL ? "flex-row-reverse" : ""
           }`}
         >
-          <Image src="/jethings/logo-written.png" alt="logo" width={100} height={100} />
+          <span className="text-xl sm:text-2xl font-bold text-gray-900">jethings</span>
         </Link>
 
         {/* Desktop Navigation */}
