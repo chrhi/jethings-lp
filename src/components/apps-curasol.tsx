@@ -143,12 +143,6 @@ export function AppsCurasol() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            {showNav && (
-              <>
-                <CarouselPrevious className="top-1/2 -translate-y-1/2 -left-3 hidden sm:flex bg-white shadow-md border-slate-200 hover:bg-slate-50 hover:border-blue-600" />
-                <CarouselNext className="top-1/2 -translate-y-1/2 -right-3 hidden sm:flex bg-white shadow-md border-slate-200 hover:bg-slate-50 hover:border-blue-600" />
-              </>
-            )}
           </Carousel>
         </div>
       </MaxWidthWrapper>

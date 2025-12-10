@@ -110,10 +110,15 @@
     }
   },
   "about": {
-    "headline": "Built by retailers,",
-    "headlineHighlight": "for retailers.",
-    "paragraph1": "We've built J Store and J Optics because we understand retail. These aren't generic solutions — they're purpose-built software designed specifically for shoe stores and optical stores. Every feature is crafted with your daily operations in mind.",
-    "paragraph2": "Whether you're managing inventory for a shoe store or handling prescriptions at an optical shop, our software adapts to your workflow. Simple to use, powerful enough to scale, and always improving based on real retailer feedback.",
+    "sectionLabel": "About Us",
+    "headline": "Retail software",
+    "headlineHighlight": "for retailers and suppliers.",
+    "paragraph1": "We've built J Store and J Optics because we understand retail. These aren't generic solutions — they're purpose-built software designed specifically for shoe stores, optical stores, and their suppliers. Every feature is crafted with your daily operations in mind.",
+    "paragraph2": "Whether you're a retailer managing inventory for a shoe store, handling prescriptions at an optical shop, or a supplier coordinating with multiple retail partners, our software adapts to your workflow. Simple to use, powerful enough to scale, and always improving based on real feedback from retailers and suppliers.",
+    "ctaTitle": "Ready to get started?",
+    "ctaDescription": "See how our retail software can transform your business operations.",
+    "viewPricing": "View Pricing",
+    "contactUs": "Contact Us",
     "easySetup": {
       "title": "Easy Setup",
       "description": "Get started in minutes, not months"
@@ -133,6 +138,82 @@
     "description": "Ready to streamline your store operations? Explore J Store for shoe stores or J Optics for optical stores. Get in touch today to see how our retail software can transform your business.",
     "bookDemo": "Book a Demo",
     "ctaDescription": "Ready to see it live? Choose how you want to connect."
+  },
+  "pricing": {
+    "sectionLabel": "Pricing",
+    "title": "Simple, transparent pricing",
+    "description": "Choose the plan that fits your retail business needs",
+    "popular": "Popular",
+    "period": "/month",
+    "contactForPricing": "Contact us for pricing",
+    "customQuote": "Custom quote available",
+    "getStarted": "Get Started",
+    "viewFAQ": "View FAQ",
+    "note": "All plans include setup assistance and ongoing support. Need a custom solution?",
+    "contactUs": "Contact Us",
+    "plans": {
+      "basic": {
+        "name": "Basic",
+        "description": "Perfect for small stores getting started",
+        "features": {
+          "inventory": "Stock Management - Track SKUs, variants, and never run out of stock",
+          "invoices": "Invoices - Create and send branded invoices in seconds",
+          "analytics": "Analytics - Monitor sales, margins, and trends with live dashboards",
+          "pos": "POS - Fast checkout with synced inventory and payments",
+          "clients": "Manage Clients - Keep customer history, preferences, and loyalty in one place"
+        }
+      },
+      "professional": {
+        "name": "Professional",
+        "description": "For growing retail businesses",
+        "features": {
+          "allBasic": "All Basic plan features included",
+          "advanced": "Advanced analytics and reporting",
+          "integrations": "Third-party integrations and APIs",
+          "priority": "Priority support and faster response times"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Custom solutions for large operations",
+        "features": {
+          "allProfessional": "All Professional plan features included",
+          "custom": "Custom development and features",
+          "dedicated": "Dedicated account manager",
+          "sla": "SLA guarantee and 24/7 support"
+        }
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Find answers to common questions about our pricing and plans",
+    "questions": {
+      "pricing": {
+        "question": "What's included in each plan?",
+        "answer": "All plans include our core features: inventory management, sales tracking, invoices, analytics, POS system, and customer management. Professional and Enterprise plans include additional features like advanced analytics, integrations, and priority support."
+      },
+      "setup": {
+        "question": "How long does setup take?",
+        "answer": "Basic and Professional plans can be set up in minutes. We provide step-by-step guidance and support to get you started quickly. Enterprise plans may require custom configuration and typically take a few days."
+      },
+      "support": {
+        "question": "What kind of support do you offer?",
+        "answer": "All plans include email support. Professional plans get priority support with faster response times. Enterprise plans include dedicated account management and 24/7 support with SLA guarantees."
+      },
+      "payment": {
+        "question": "How do I pay?",
+        "answer": "We accept various payment methods. Monthly plans are billed automatically. You can cancel or change your plan at any time through your account settings."
+      },
+      "trial": {
+        "question": "Do you offer a free trial?",
+        "answer": "Yes, we offer a free trial period so you can explore all features before committing. Contact us to learn more about our trial options."
+      },
+      "custom": {
+        "question": "Can I customize my plan?",
+        "answer": "Enterprise plans include custom development and features tailored to your needs. For Basic and Professional plans, contact us to discuss custom requirements."
+      }
+    }
   },
   "cta": {
     "button": "Get Started",

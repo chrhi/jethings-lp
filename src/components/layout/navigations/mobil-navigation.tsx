@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import { useTranslations, useLocale } from "next-intl"
+import { usePathname } from "next/navigation"
 import { Menu, Globe } from "lucide-react"
 import Link from "next/link"
 
@@ -18,6 +19,7 @@ import CustomLocaleSwitcher from "@/components/locale-switcher-select"
 export function MobileNavigation() {
   const t = useTranslations("header")
   const locale = useLocale()
+  const pathname = usePathname()
   const isRTL = locale === "ar"
   const [open, setOpen] = React.useState(false)
 
@@ -30,6 +32,14 @@ export function MobileNavigation() {
     ],
     [t]
   )
+
+  // Check if a nav item is active
+  const isActive = (href: string) => {
+    if (href === "/") {
+      return pathname === "/"
+    }
+    return pathname?.startsWith(href)
+  }
 
   // Language options for the switcher
   const languageItems = React.useMemo(
@@ -61,17 +71,24 @@ export function MobileNavigation() {
         
         <nav className="mt-6 px-4 flex-1">
           <ul className="space-y-2">
-            {navItems.map((item) => (
-              <li key={item.id}>
-                <Link
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  className={`block w-full px-4 py-3 rounded-xl text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-600/5 hover:to-transparent transition-all duration-200 border border-transparent hover:border-blue-600/20 ${isRTL ? "text-right" : "text-left"}`}
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
+            {navItems.map((item) => {
+              const active = isActive(item.href)
+              return (
+                <li key={item.id}>
+                  <Link
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    className={`block w-full px-4 py-3 rounded-xl text-base font-medium transition-all duration-200 border ${
+                      active
+                        ? "text-blue-600 bg-blue-50 border-blue-600/30 font-semibold"
+                        : "text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-600/5 hover:to-transparent border-transparent hover:border-blue-600/20"
+                    } ${isRTL ? "text-right" : "text-left"}`}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              )
+            })}
           </ul>
         </nav>
         

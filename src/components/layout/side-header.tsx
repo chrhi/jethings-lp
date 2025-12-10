@@ -2,6 +2,7 @@
 
 import { useState, useMemo, useEffect } from "react"
 import { useTranslations, useLocale } from "next-intl"
+import { usePathname } from "next/navigation"
 import MaxWidthWrapper from "../max-with-wrapper"
 import { MobileNavigation } from "./navigations/mobil-navigation"
 import CustomLocaleSwitcher from "../locale-switcher-select"
@@ -11,6 +12,7 @@ import Image from "next/image"
 export const SiteHeader = () => {
   const t = useTranslations("header")
   const locale = useLocale()
+  const pathname = usePathname()
   const isRTL = locale === "ar"
   const [isScrolled, setIsScrolled] = useState(false)
 
@@ -23,6 +25,14 @@ export const SiteHeader = () => {
     ],
     [t]
   )
+
+  // Check if a nav item is active
+  const isActive = (href: string) => {
+    if (href === "/") {
+      return pathname === "/"
+    }
+    return pathname?.startsWith(href)
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -63,16 +73,23 @@ export const SiteHeader = () => {
           className="hidden lg:flex flex-1 items-center justify-center"
         >
           <ul className="flex items-center gap-6">
-            {navItems.map((item) => (
-              <li key={item.id}>
-                <Link
-                  href={item.href}
-                  className="text-sm font-medium transition-colors duration-200 hover:text-blue-600 text-gray-700 whitespace-nowrap"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
+            {navItems.map((item) => {
+              const active = isActive(item.href)
+              return (
+                <li key={item.id}>
+                  <Link
+                    href={item.href}
+                    className={`text-sm font-medium transition-colors duration-200 whitespace-nowrap ${
+                      active
+                        ? "text-blue-600 border-b-2 border-blue-600 pb-1"
+                        : "text-gray-700 hover:text-blue-600"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              )
+            })}
           </ul>
         </nav>
 

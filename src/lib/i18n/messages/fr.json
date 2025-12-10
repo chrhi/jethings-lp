@@ -110,10 +110,15 @@
     }
   },
   "about": {
-    "headline": "Conçu par des détaillants,",
-    "headlineHighlight": "pour les détaillants.",
-    "paragraph1": "Nous avons créé J Store et J Optics parce que nous comprenons le commerce de détail. Ce ne sont pas des solutions génériques — ce sont des logiciels conçus spécifiquement pour les magasins de chaussures et d'optique. Chaque fonctionnalité est conçue en pensant à vos opérations quotidiennes.",
-    "paragraph2": "Que vous gériez les stocks d'un magasin de chaussures ou que vous traitiez les ordonnances dans un magasin d'optique, notre logiciel s'adapte à votre flux de travail. Simple à utiliser, assez puissant pour évoluer, et toujours amélioré sur la base des commentaires réels des détaillants.",
+    "sectionLabel": "À propos de nous",
+    "headline": "Logiciel de vente au détail",
+    "headlineHighlight": "pour les détaillants et les fournisseurs.",
+    "paragraph1": "Nous avons créé J Store et J Optics parce que nous comprenons le commerce de détail. Ce ne sont pas des solutions génériques — ce sont des logiciels conçus spécifiquement pour les magasins de chaussures, les magasins d'optique et leurs fournisseurs. Chaque fonctionnalité est conçue en pensant à vos opérations quotidiennes.",
+    "paragraph2": "Que vous soyez un détaillant gérant les stocks d'un magasin de chaussures, traitant les ordonnances dans un magasin d'optique, ou un fournisseur coordonnant avec plusieurs partenaires de vente au détail, notre logiciel s'adapte à votre flux de travail. Simple à utiliser, assez puissant pour évoluer, et toujours amélioré sur la base des commentaires réels des détaillants et des fournisseurs.",
+    "ctaTitle": "Prêt à commencer ?",
+    "ctaDescription": "Découvrez comment notre logiciel de vente au détail peut transformer les opérations de votre entreprise.",
+    "viewPricing": "Voir les tarifs",
+    "contactUs": "Contactez-nous",
     "easySetup": {
       "title": "Configuration facile",
       "description": "Démarrez en quelques minutes, pas en quelques mois"
@@ -133,6 +138,82 @@
     "description": "Prêt à rationaliser les opérations de votre magasin ? Découvrez J Store pour les magasins de chaussures ou J Optics pour les magasins d'optique. Contactez-nous dès aujourd'hui pour voir comment notre logiciel de vente au détail peut transformer votre entreprise.",
     "bookDemo": "Réserver une démo",
     "ctaDescription": "Prêt à le voir en action ? Choisissez comment vous souhaitez vous connecter."
+  },
+  "pricing": {
+    "sectionLabel": "Tarification",
+    "title": "Tarification simple et transparente",
+    "description": "Choisissez le plan qui correspond aux besoins de votre entreprise de vente au détail",
+    "popular": "Populaire",
+    "period": "/mois",
+    "contactForPricing": "Contactez-nous pour les tarifs",
+    "customQuote": "Devis personnalisé disponible",
+    "getStarted": "Commencer",
+    "viewFAQ": "Voir FAQ",
+    "note": "Tous les plans incluent l'assistance à la configuration et le support continu. Besoin d'une solution personnalisée ?",
+    "contactUs": "Contactez-nous",
+    "plans": {
+      "basic": {
+        "name": "Basique",
+        "description": "Parfait pour les petits magasins qui commencent",
+        "features": {
+          "inventory": "Gestion des stocks - Suivez les références, variantes et ne manquez jamais de stock",
+          "invoices": "Factures - Créez et envoyez des factures personnalisées en quelques secondes",
+          "analytics": "Analyses - Surveillez les ventes, marges et tendances avec des tableaux de bord en direct",
+          "pos": "Point de vente - Encaissement rapide avec inventaire et paiements synchronisés",
+          "clients": "Gérer les clients - Conservez l'historique, les préférences et la fidélité des clients en un seul endroit"
+        }
+      },
+      "professional": {
+        "name": "Professionnel",
+        "description": "Pour les entreprises de vente au détail en croissance",
+        "features": {
+          "allBasic": "Toutes les fonctionnalités du plan Basique incluses",
+          "advanced": "Analyses et rapports avancés",
+          "integrations": "Intégrations tierces et APIs",
+          "priority": "Support prioritaire et temps de réponse plus rapides"
+        }
+      },
+      "enterprise": {
+        "name": "Entreprise",
+        "description": "Solutions personnalisées pour les grandes opérations",
+        "features": {
+          "allProfessional": "Toutes les fonctionnalités du plan Professionnel incluses",
+          "custom": "Développement et fonctionnalités personnalisés",
+          "dedicated": "Gestionnaire de compte dédié",
+          "sla": "Garantie SLA et support 24/7"
+        }
+      }
+    }
+  },
+  "faq": {
+    "title": "Questions fréquemment posées",
+    "description": "Trouvez des réponses aux questions courantes sur nos tarifs et plans",
+    "questions": {
+      "pricing": {
+        "question": "Qu'est-ce qui est inclus dans chaque plan ?",
+        "answer": "Tous les plans incluent nos fonctionnalités principales : gestion des stocks, suivi des ventes, factures, analyses, système de point de vente et gestion des clients. Les plans Professionnel et Entreprise incluent des fonctionnalités supplémentaires comme des analyses avancées, des intégrations et un support prioritaire."
+      },
+      "setup": {
+        "question": "Combien de temps prend la configuration ?",
+        "answer": "Les plans Basique et Professionnel peuvent être configurés en quelques minutes. Nous fournissons des instructions étape par étape et un support pour vous aider à démarrer rapidement. Les plans Entreprise peuvent nécessiter une configuration personnalisée et prennent généralement quelques jours."
+      },
+      "support": {
+        "question": "Quel type de support offrez-vous ?",
+        "answer": "Tous les plans incluent un support par email. Les plans Professionnel bénéficient d'un support prioritaire avec des temps de réponse plus rapides. Les plans Entreprise incluent une gestion de compte dédiée et un support 24/7 avec des garanties SLA."
+      },
+      "payment": {
+        "question": "Comment puis-je payer ?",
+        "answer": "Nous acceptons divers modes de paiement. Les plans mensuels sont facturés automatiquement. Vous pouvez annuler ou modifier votre plan à tout moment via les paramètres de votre compte."
+      },
+      "trial": {
+        "question": "Offrez-vous un essai gratuit ?",
+        "answer": "Oui, nous offrons une période d'essai gratuite pour que vous puissiez explorer toutes les fonctionnalités avant de vous engager. Contactez-nous pour en savoir plus sur nos options d'essai."
+      },
+      "custom": {
+        "question": "Puis-je personnaliser mon plan ?",
+        "answer": "Les plans Entreprise incluent un développement personnalisé et des fonctionnalités adaptées à vos besoins. Pour les plans Basique et Professionnel, contactez-nous pour discuter des exigences personnalisées."
+      }
+    }
   },
   "cta": {
     "button": "Commencer",
