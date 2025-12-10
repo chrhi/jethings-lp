@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/form"
 
 import toast from "react-hot-toast"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import {
   Dialog,
@@ -41,6 +41,8 @@ import {
 export default function SendRequestModal() {
   const t = useTranslations("cta")
   const tValidation = useTranslations("cta.validation")
+  const locale = useLocale()
+  const isRTL = locale === "ar"
   const [open, setOpen] = React.useState(false)
   const [isDesktop, setIsDesktop] = React.useState(false)
 
@@ -107,10 +109,17 @@ export default function SendRequestModal() {
     }
   }
 
-  const FormContent = (
-    <div className="w-full p-2">
+  const FormContent = () => (
+    <div
+      className={`w-full p-2 ${isRTL ? "font-cairo text-right" : ""}`}
+      dir={isRTL ? "rtl" : "ltr"}
+      lang={locale}
+    >
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className={`space-y-6 ${isRTL ? "text-right" : ""}`}
+        >
           {/* Full Name */}
           <FormField
             control={form.control}
@@ -119,7 +128,12 @@ export default function SendRequestModal() {
               <FormItem>
                 <FormLabel>{t("form.fullName")}</FormLabel>
                 <FormControl>
-                  <Input placeholder={t("form.fullNamePlaceholder")} {...field} />
+                  <Input
+                    placeholder={t("form.fullNamePlaceholder")}
+                    className={isRTL ? "text-right placeholder:text-right" : ""}
+                    dir={isRTL ? "rtl" : "ltr"}
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -134,7 +148,12 @@ export default function SendRequestModal() {
               <FormItem>
                 <FormLabel>{t("form.phone")}</FormLabel>
                 <FormControl>
-                  <Input placeholder={t("form.phonePlaceholder")} {...field} />
+                  <Input
+                    placeholder={t("form.phonePlaceholder")}
+                    className={isRTL ? "text-right placeholder:text-right" : ""}
+                    dir={isRTL ? "rtl" : "ltr"}
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -149,7 +168,12 @@ export default function SendRequestModal() {
               <FormItem>
                 <FormLabel>{t("form.email")}</FormLabel>
                 <FormControl>
-                  <Input placeholder={t("form.emailPlaceholder")} {...field} />
+                  <Input
+                    placeholder={t("form.emailPlaceholder")}
+                    className={isRTL ? "text-right placeholder:text-right" : ""}
+                    dir={isRTL ? "rtl" : "ltr"}
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -166,7 +190,10 @@ export default function SendRequestModal() {
                 <FormControl>
                   <Textarea
                     placeholder={t("form.descriptionPlaceholder")}
-                    className="min-h-[120px]"
+                    className={`min-h-[120px] ${
+                      isRTL ? "text-right placeholder:text-right leading-relaxed" : ""
+                    }`}
+                    dir={isRTL ? "rtl" : "ltr"}
                     {...field}
                   />
                 </FormControl>
@@ -198,26 +225,32 @@ export default function SendRequestModal() {
 
       {isDesktop ? (
         <Dialog open={open} onOpenChange={setOpen}>
-          <DialogContent className="sm:max-w-[600px]">
-            <DialogHeader>
+          <DialogContent
+            dir={isRTL ? "rtl" : "ltr"}
+            className={`sm:max-w-[600px] ${isRTL ? "font-cairo text-right" : ""}`}
+          >
+            <DialogHeader className={isRTL ? "text-right" : ""}>
               <DialogTitle>{t("title")}</DialogTitle>
-              <DialogDescription>
+              <DialogDescription className={isRTL ? "text-right" : ""}>
                 {t("description")}
               </DialogDescription>
             </DialogHeader>
-            {FormContent}
+            <FormContent />
           </DialogContent>
         </Dialog>
       ) : (
         <Drawer open={open} onOpenChange={setOpen}>
-          <DrawerContent>
-            <DrawerHeader>
+          <DrawerContent
+            dir={isRTL ? "rtl" : "ltr"}
+            className={isRTL ? "font-cairo text-right" : ""}
+          >
+            <DrawerHeader className={isRTL ? "text-right" : ""}>
               <DrawerTitle>{t("title")}</DrawerTitle>
-              <DrawerDescription>
+              <DrawerDescription className={isRTL ? "text-right" : ""}>
                 {t("description")}
               </DrawerDescription>
             </DrawerHeader>
-            {FormContent}
+            <FormContent />
             <DrawerFooter className="pt-2">
               <DrawerClose asChild>
                 <Button variant="outline">{t("form.cancel")}</Button>
